@@ -16,5 +16,14 @@ namespace Markeplace
         {
 
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            registro rg = new registro();
+            
+           
+            rg.Show();
+        
+        }
     }
 }

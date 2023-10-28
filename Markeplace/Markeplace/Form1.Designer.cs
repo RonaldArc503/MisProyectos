@@ -28,24 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel1 = new Panel();
+            pictureBox1 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             label3 = new Label();
             label4 = new Label();
+            button1 = new Button();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(26, 176, 140);
+            panel1.Controls.Add(pictureBox1);
             panel1.ForeColor = Color.White;
             panel1.Location = new Point(-2, -3);
             panel1.Margin = new Padding(0);
             panel1.Name = "panel1";
             panel1.Size = new Size(516, 640);
             panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(50, 73);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(400, 400);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -69,7 +85,7 @@
             // 
             // textBox1
             // 
-            textBox1.Font = new Font("SimSun-ExtB", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox1.Font = new Font("SimSun-ExtB", 18F, FontStyle.Regular, GraphicsUnit.Point);
             textBox1.Location = new Point(579, 254);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
@@ -83,7 +99,7 @@
             textBox2.Location = new Point(579, 348);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(409, 35);
+            textBox2.Size = new Size(409, 37);
             textBox2.TabIndex = 4;
             textBox2.Tag = "";
             // 
@@ -108,6 +124,19 @@
             label4.Size = new Size(112, 17);
             label4.TabIndex = 6;
             label4.Text = "No tienes cuenta?";
+            label4.Click += label4_Click;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(26, 176, 140);
+            button1.Font = new Font("SimSun-ExtB", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(717, 521);
+            button1.Name = "button1";
+            button1.Size = new Size(157, 51);
+            button1.TabIndex = 7;
+            button1.Text = "Login";
+            button1.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
@@ -115,6 +144,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1063, 633);
+            Controls.Add(button1);
             Controls.Add(label3);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
@@ -125,6 +155,8 @@
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
+            panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -138,5 +170,7 @@
         private TextBox textBox2;
         private Label label3;
         private Label label4;
+        private PictureBox pictureBox1;
+        private Button button1;
     }
 }
