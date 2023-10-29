@@ -33,11 +33,11 @@
             pictureBox1 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            Usuario = new TextBox();
+            Contrasena = new TextBox();
             label3 = new Label();
             label4 = new Label();
-            button1 = new Button();
+            Login = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -79,29 +79,29 @@
             label2.Font = new Font("SimSun-ExtB", 18F, FontStyle.Regular, GraphicsUnit.Point);
             label2.Location = new Point(579, 227);
             label2.Name = "label2";
-            label2.Size = new Size(106, 24);
+            label2.Size = new Size(70, 24);
             label2.TabIndex = 2;
-            label2.Text = "Usuario:";
+            label2.Text = "User:";
             // 
-            // textBox1
+            // Usuario
             // 
-            textBox1.Font = new Font("SimSun-ExtB", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(579, 254);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(409, 37);
-            textBox1.TabIndex = 3;
-            textBox1.TextChanged += textBox1_TextChanged;
+            Usuario.Font = new Font("SimSun-ExtB", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            Usuario.Location = new Point(579, 254);
+            Usuario.Multiline = true;
+            Usuario.Name = "Usuario";
+            Usuario.Size = new Size(409, 37);
+            Usuario.TabIndex = 3;
+            Usuario.TextChanged += textBox1_TextChanged;
             // 
-            // textBox2
+            // Contrasena
             // 
-            textBox2.Font = new Font("SimSun-ExtB", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(579, 348);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(409, 37);
-            textBox2.TabIndex = 4;
-            textBox2.Tag = "";
+            Contrasena.Font = new Font("SimSun-ExtB", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            Contrasena.Location = new Point(579, 348);
+            Contrasena.Multiline = true;
+            Contrasena.Name = "Contrasena";
+            Contrasena.Size = new Size(409, 37);
+            Contrasena.TabIndex = 4;
+            Contrasena.Tag = "";
             // 
             // label3
             // 
@@ -109,9 +109,9 @@
             label3.Font = new Font("SimSun-ExtB", 18F, FontStyle.Regular, GraphicsUnit.Point);
             label3.Location = new Point(579, 321);
             label3.Name = "label3";
-            label3.Size = new Size(140, 24);
+            label3.Size = new Size(118, 24);
             label3.TabIndex = 5;
-            label3.Text = "Contraseña:";
+            label3.Text = "Password:";
             // 
             // label4
             // 
@@ -126,17 +126,17 @@
             label4.Text = "No tienes cuenta?";
             label4.Click += label4_Click;
             // 
-            // button1
+            // Login
             // 
-            button1.BackColor = Color.FromArgb(26, 176, 140);
-            button1.Font = new Font("SimSun-ExtB", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(717, 521);
-            button1.Name = "button1";
-            button1.Size = new Size(157, 51);
-            button1.TabIndex = 7;
-            button1.Text = "Login";
-            button1.UseVisualStyleBackColor = false;
+            Login.BackColor = Color.FromArgb(26, 176, 140);
+            Login.Font = new Font("SimSun-ExtB", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            Login.ForeColor = Color.White;
+            Login.Location = new Point(717, 521);
+            Login.Name = "Login";
+            Login.Size = new Size(157, 51);
+            Login.TabIndex = 7;
+            Login.Text = "Login";
+            Login.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
@@ -144,10 +144,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1063, 633);
-            Controls.Add(button1);
+            Controls.Add(Login);
             Controls.Add(label3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(Contrasena);
+            Controls.Add(Usuario);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(panel1);
@@ -166,11 +166,11 @@
         private Panel panel1;
         private Label label1;
         private Label label2;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox Usuario;
+        private TextBox Contrasena;
         private Label label3;
         private Label label4;
         private PictureBox pictureBox1;
-        private Button button1;
+        private Button Login;
     }
 }
