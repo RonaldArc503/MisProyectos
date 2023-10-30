@@ -47,10 +47,10 @@
             panel1.BackColor = Color.FromArgb(26, 176, 140);
             panel1.Controls.Add(pictureBox1);
             panel1.ForeColor = Color.White;
-            panel1.Location = new Point(-2, -3);
+            panel1.Location = new Point(-2, 0);
             panel1.Margin = new Padding(0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(516, 640);
+            panel1.Size = new Size(539, 638);
             panel1.TabIndex = 0;
             // 
             // pictureBox1
@@ -153,6 +153,7 @@
             Controls.Add(panel1);
             Controls.Add(label4);
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             Load += Form1_Load;
             panel1.ResumeLayout(false);

@@ -17,6 +17,7 @@ namespace Markeplace
         {
             InitializeComponent();
 
+
         }
 
         private void registro_Load(object sender, EventArgs e)
@@ -106,9 +107,16 @@ namespace Markeplace
         private void label4_Click(object sender, EventArgs e)
         {
             Form1 Fm = new Form1();
-            Fm.Show();
-            Hide();
-            
+
+            this.Hide();
+            Fm.ShowDialog();
+            this.Close();
+
+        }
+
+        private void Apellidousuario_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

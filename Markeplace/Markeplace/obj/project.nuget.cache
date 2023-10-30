@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "nMoAH6wNlDrbFiN9PLPqwgYMFkwSV6lxJ3XqCbq0NGf9qE8fIXcNzmuOyxLe1t2Iz5tXPRcJ0phgehT9HCKWug==",
+  "dgSpecHash": "CrspPhNmeuFHpzNlsxPfyaS8TXljSekRgcY3vE+/l4ZTQTOmqDXzHfZW4BDOJxON+N6acMYS2PlonWS3/NFJLA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\Source\\Repos\\RonaldArc503\\MisProyectos\\Markeplace\\Markeplace\\Markeplace.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Win10\\Desktop\\ProyectoFinal\\MisProyectos\\Markeplace\\Markeplace\\Markeplace.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Win10\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.24\\microsoft.windowsdesktop.app.ref.6.0.24.nupkg.sha512",
+    "C:\\Users\\Win10\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.24\\microsoft.netcore.app.ref.6.0.24.nupkg.sha512",
+    "C:\\Users\\Win10\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.24\\microsoft.aspnetcore.app.ref.6.0.24.nupkg.sha512",
+    "C:\\Users\\Win10\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.24\\microsoft.netcore.app.host.win-x64.6.0.24.nupkg.sha512"
+  ],
   "logs": []
 }

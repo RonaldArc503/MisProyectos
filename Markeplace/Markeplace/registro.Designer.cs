@@ -51,7 +51,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(50, 73);
+            pictureBox1.Location = new Point(73, 95);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(400, 400);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -63,10 +63,10 @@
             panel1.BackColor = Color.FromArgb(26, 176, 140);
             panel1.Controls.Add(pictureBox1);
             panel1.ForeColor = Color.White;
-            panel1.Location = new Point(549, 1);
+            panel1.Location = new Point(536, -1);
             panel1.Margin = new Padding(0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(516, 632);
+            panel1.Size = new Size(527, 634);
             panel1.TabIndex = 1;
             panel1.Paint += panel1_Paint;
             // 
@@ -115,7 +115,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Palatino Linotype", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(26, 28);
+            label1.Location = new Point(147, 29);
             label1.Name = "label1";
             label1.Size = new Size(163, 50);
             label1.TabIndex = 8;
@@ -132,6 +132,7 @@
             Apellidousuario.TabIndex = 15;
             Apellidousuario.Text = "Apellidos";
             Apellidousuario.TextAlign = HorizontalAlignment.Center;
+            Apellidousuario.TextChanged += Apellidousuario_TextChanged;
             Apellidousuario.Enter += Apellidousuario_Enter;
             Apellidousuario.Leave += Apellidousuario_Leave;
             // 
@@ -148,7 +149,7 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Masculino", "Femenino", "Otro" });
+            comboBox1.Items.AddRange(new object[] { "Masculino", "Femenino" });
             comboBox1.Location = new Point(42, 348);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(121, 23);
@@ -239,6 +240,7 @@
             Controls.Add(label1);
             Controls.Add(panel1);
             Name = "registro";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "registro";
             Load += registro_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

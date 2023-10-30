@@ -21,9 +21,15 @@ namespace Markeplace
         {
             registro rg = new registro();
 
+            this.Hide();
 
-            rg.Show();
-            Hide();
+            rg.ShowDialog();
+
+            this.Close();
+
+
+
+
 
         }
     }
