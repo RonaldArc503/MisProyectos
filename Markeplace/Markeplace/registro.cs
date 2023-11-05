@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Markeplace
 {
@@ -19,6 +20,8 @@ namespace Markeplace
 
 
         }
+
+        SqlConnection conexion = new SqlConnection("Server=DESKTOP-LALT64T; database=Login; integrated security= true ");
 
         private void registro_Load(object sender, EventArgs e)
         {
