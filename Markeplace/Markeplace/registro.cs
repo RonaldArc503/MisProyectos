@@ -20,8 +20,40 @@ namespace Markeplace
 
 
         }
+        //sql conectado
+        SqlConnection conexion = new SqlConnection("Server=DESKTOP-LALT64T; database=Marketplace; integrated security= true ");
 
-        SqlConnection conexion = new SqlConnection("Server=DESKTOP-LALT64T; database=Login; integrated security= true ");
+        private void RegistrarBD(object sender, EventArgs e)
+        {
+            conexion.Open();
+
+            string name = namebox.Text;
+            string lastn = lastnamebox.Text;
+            string email = emailbox.Text;
+            string user = userbox.Text;
+            string clave = clavebox.Text;
+
+            string consulta = "INSERT INTO Usuarios (Nombre, Apellido, Correo, Usuario,Clave) " +
+                                "VALUES (@Name, @Lastn, @Email, @User,@Clave)";
+            using (SqlCommand comando = new SqlCommand(consulta, conexion))
+            {
+                comando.Parameters.AddWithValue("@Name", name);
+                comando.Parameters.AddWithValue("@Lastn", lastn);
+                comando.Parameters.AddWithValue("@Email", email);
+                comando.Parameters.AddWithValue("@User", user);
+                comando.Parameters.AddWithValue("@Clave", clave);
+                comando.ExecuteNonQuery();
+
+                MessageBox.Show("Usted se ha Registrado, Gracias.");
+            }
+        }
+
+
+
+
+
+
+
 
         private void registro_Load(object sender, EventArgs e)
         {
@@ -36,74 +68,74 @@ namespace Markeplace
 
         private void Nombreusuario_Enter(object sender, EventArgs e)
         {
-            if (Nombreusuario.Text == "Nombres")
+            if (namebox.Text == "Nombres")
             {
-                Nombreusuario.Text = "";
-                Nombreusuario.ForeColor = Color.Black;
+                namebox.Text = "";
+                namebox.ForeColor = Color.Black;
             }
 
         }
 
         private void Nombreusuario_Leave(object sender, EventArgs e)
         {
-            if (Nombreusuario.Text == "")
+            if (namebox.Text == "")
             {
-                Nombreusuario.Text = "Nombres";
-                Nombreusuario.ForeColor = Color.Gray;
+                namebox.Text = "Nombres";
+                namebox.ForeColor = Color.Gray;
             }
         }
 
         private void Apellidousuario_Enter(object sender, EventArgs e)
         {
-            if (Apellidousuario.Text == "Apellidos")
+            if (lastnamebox.Text == "Apellidos")
             {
-                Apellidousuario.Text = "";
-                Apellidousuario.ForeColor = Color.Black;
+                lastnamebox.Text = "";
+                lastnamebox.ForeColor = Color.Black;
             }
         }
 
         private void Apellidousuario_Leave(object sender, EventArgs e)
         {
-            if (Apellidousuario.Text == "")
+            if (lastnamebox.Text == "")
             {
-                Apellidousuario.Text = "Apellidos";
-                Apellidousuario.ForeColor = Color.Gray;
+                lastnamebox.Text = "Apellidos";
+                lastnamebox.ForeColor = Color.Gray;
             }
         }
 
         private void Correo_Enter(object sender, EventArgs e)
         {
-            if (Correo.Text == "Correo electrónico")
+            if (emailbox.Text == "Correo electrónico")
             {
-                Correo.Text = "";
-                Correo.ForeColor = Color.Black;
+                emailbox.Text = "";
+                emailbox.ForeColor = Color.Black;
             }
         }
 
         private void Correo_Leave(object sender, EventArgs e)
         {
-            if (Correo.Text == "")
+            if (emailbox.Text == "")
             {
-                Correo.Text = "Correo electrónico";
-                Correo.ForeColor = Color.Gray;
+                emailbox.Text = "Correo electrónico";
+                emailbox.ForeColor = Color.Gray;
             }
         }
 
         private void Contrasena_Enter(object sender, EventArgs e)
         {
-            if (Contrasena.Text == "Contraseña")
+            if (clavebox.Text == "Contraseña")
             {
-                Contrasena.Text = "";
-                Contrasena.ForeColor = Color.Black;
+                clavebox.Text = "";
+                clavebox.ForeColor = Color.Black;
             }
         }
 
         private void Contrasena_Leave(object sender, EventArgs e)
         {
-            if (Contrasena.Text == "")
+            if (clavebox.Text == "")
             {
-                Contrasena.Text = "Contraseña";
-                Contrasena.ForeColor = Color.Gray;
+                clavebox.Text = "Contraseña";
+                clavebox.ForeColor = Color.Gray;
             }
         }
 
@@ -116,6 +148,10 @@ namespace Markeplace
             this.Close();
 
         }
+
+
+
+
 
         private void Apellidousuario_TextChanged(object sender, EventArgs e)
         {

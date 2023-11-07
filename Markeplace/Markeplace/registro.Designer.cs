@@ -32,18 +32,19 @@
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
             Login = new Button();
-            Correo = new TextBox();
-            Nombreusuario = new TextBox();
+            emailbox = new TextBox();
+            namebox = new TextBox();
             label1 = new Label();
-            Apellidousuario = new TextBox();
+            lastnamebox = new TextBox();
             label2 = new Label();
             comboBox1 = new ComboBox();
-            Contrasena = new TextBox();
+            clavebox = new TextBox();
             label3 = new Label();
             label4 = new Label();
-            comboBox2 = new ComboBox();
-            comboBox3 = new ComboBox();
-            comboBox4 = new ComboBox();
+            daybox = new ComboBox();
+            mountbox = new ComboBox();
+            yearbox = new ComboBox();
+            userbox = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -79,37 +80,38 @@
             Login.Name = "Login";
             Login.Size = new Size(157, 51);
             Login.TabIndex = 13;
-            Login.Text = "Login";
+            Login.Text = "Registrar";
             Login.UseVisualStyleBackColor = false;
+            Login.Click += RegistrarBD;
             // 
-            // Correo
+            // emailbox
             // 
-            Correo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            Correo.ForeColor = Color.Gray;
-            Correo.Location = new Point(42, 152);
-            Correo.Multiline = true;
-            Correo.Name = "Correo";
-            Correo.Size = new Size(358, 37);
-            Correo.TabIndex = 11;
-            Correo.Tag = "";
-            Correo.Text = "Correo electrónico";
-            Correo.TextAlign = HorizontalAlignment.Center;
-            Correo.Enter += Correo_Enter;
-            Correo.Leave += Correo_Leave;
+            emailbox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            emailbox.ForeColor = Color.Gray;
+            emailbox.Location = new Point(42, 152);
+            emailbox.Multiline = true;
+            emailbox.Name = "emailbox";
+            emailbox.Size = new Size(358, 37);
+            emailbox.TabIndex = 11;
+            emailbox.Tag = "";
+            emailbox.Text = "Correo electrónico";
+            emailbox.TextAlign = HorizontalAlignment.Center;
+            emailbox.Enter += Correo_Enter;
+            emailbox.Leave += Correo_Leave;
             // 
-            // Nombreusuario
+            // namebox
             // 
-            Nombreusuario.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            Nombreusuario.ForeColor = Color.Gray;
-            Nombreusuario.Location = new Point(42, 109);
-            Nombreusuario.Multiline = true;
-            Nombreusuario.Name = "Nombreusuario";
-            Nombreusuario.Size = new Size(165, 37);
-            Nombreusuario.TabIndex = 10;
-            Nombreusuario.Text = "Nombres";
-            Nombreusuario.TextAlign = HorizontalAlignment.Center;
-            Nombreusuario.Enter += Nombreusuario_Enter;
-            Nombreusuario.Leave += Nombreusuario_Leave;
+            namebox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            namebox.ForeColor = Color.Gray;
+            namebox.Location = new Point(42, 109);
+            namebox.Multiline = true;
+            namebox.Name = "namebox";
+            namebox.Size = new Size(165, 37);
+            namebox.TabIndex = 10;
+            namebox.Text = "Nombre";
+            namebox.TextAlign = HorizontalAlignment.Center;
+            namebox.Enter += Nombreusuario_Enter;
+            namebox.Leave += Nombreusuario_Leave;
             // 
             // label1
             // 
@@ -121,26 +123,26 @@
             label1.TabIndex = 8;
             label1.Text = "Registro";
             // 
-            // Apellidousuario
+            // lastnamebox
             // 
-            Apellidousuario.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            Apellidousuario.ForeColor = Color.Gray;
-            Apellidousuario.Location = new Point(235, 109);
-            Apellidousuario.Multiline = true;
-            Apellidousuario.Name = "Apellidousuario";
-            Apellidousuario.Size = new Size(165, 37);
-            Apellidousuario.TabIndex = 15;
-            Apellidousuario.Text = "Apellidos";
-            Apellidousuario.TextAlign = HorizontalAlignment.Center;
-            Apellidousuario.TextChanged += Apellidousuario_TextChanged;
-            Apellidousuario.Enter += Apellidousuario_Enter;
-            Apellidousuario.Leave += Apellidousuario_Leave;
+            lastnamebox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lastnamebox.ForeColor = Color.Gray;
+            lastnamebox.Location = new Point(235, 109);
+            lastnamebox.Multiline = true;
+            lastnamebox.Name = "lastnamebox";
+            lastnamebox.Size = new Size(165, 37);
+            lastnamebox.TabIndex = 15;
+            lastnamebox.Text = "Apellido";
+            lastnamebox.TextAlign = HorizontalAlignment.Center;
+            lastnamebox.TextChanged += Apellidousuario_TextChanged;
+            lastnamebox.Enter += Apellidousuario_Enter;
+            lastnamebox.Leave += Apellidousuario_Leave;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(42, 245);
+            label2.Location = new Point(42, 299);
             label2.Name = "label2";
             label2.Size = new Size(196, 25);
             label2.TabIndex = 16;
@@ -150,31 +152,31 @@
             // 
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Masculino", "Femenino" });
-            comboBox1.Location = new Point(42, 348);
+            comboBox1.Location = new Point(42, 402);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(121, 23);
             comboBox1.TabIndex = 18;
             // 
-            // Contrasena
+            // clavebox
             // 
-            Contrasena.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            Contrasena.ForeColor = Color.Gray;
-            Contrasena.Location = new Point(42, 195);
-            Contrasena.Multiline = true;
-            Contrasena.Name = "Contrasena";
-            Contrasena.Size = new Size(358, 37);
-            Contrasena.TabIndex = 20;
-            Contrasena.Tag = "";
-            Contrasena.Text = "Contraseña";
-            Contrasena.TextAlign = HorizontalAlignment.Center;
-            Contrasena.Enter += Contrasena_Enter;
-            Contrasena.Leave += Contrasena_Leave;
+            clavebox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            clavebox.ForeColor = Color.Gray;
+            clavebox.Location = new Point(42, 244);
+            clavebox.Multiline = true;
+            clavebox.Name = "clavebox";
+            clavebox.Size = new Size(358, 37);
+            clavebox.TabIndex = 20;
+            clavebox.Tag = "";
+            clavebox.Text = "Contraseña";
+            clavebox.TextAlign = HorizontalAlignment.Center;
+            clavebox.Enter += Contrasena_Enter;
+            clavebox.Leave += Contrasena_Leave;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(42, 320);
+            label3.Location = new Point(42, 374);
             label3.Name = "label3";
             label3.Size = new Size(78, 25);
             label3.TabIndex = 21;
@@ -193,50 +195,64 @@
             label4.Text = "Ya tienes una cuenta?";
             label4.Click += label4_Click;
             // 
-            // comboBox2
+            // daybox
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" });
-            comboBox2.Location = new Point(42, 282);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(69, 23);
-            comboBox2.TabIndex = 23;
+            daybox.FormattingEnabled = true;
+            daybox.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" });
+            daybox.Location = new Point(42, 336);
+            daybox.Name = "daybox";
+            daybox.Size = new Size(69, 23);
+            daybox.TabIndex = 23;
             // 
-            // comboBox3
+            // mountbox
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Items.AddRange(new object[] { "Enero", "Febrero", "Marzo", "Abril ", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" });
-            comboBox3.Location = new Point(117, 282);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(69, 23);
-            comboBox3.TabIndex = 24;
+            mountbox.FormattingEnabled = true;
+            mountbox.Items.AddRange(new object[] { "Enero", "Febrero", "Marzo", "Abril ", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" });
+            mountbox.Location = new Point(117, 336);
+            mountbox.Name = "mountbox";
+            mountbox.Size = new Size(69, 23);
+            mountbox.TabIndex = 24;
             // 
-            // comboBox4
+            // yearbox
             // 
-            comboBox4.FormattingEnabled = true;
-            comboBox4.Items.AddRange(new object[] { "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "" });
-            comboBox4.Location = new Point(194, 282);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(69, 23);
-            comboBox4.TabIndex = 25;
+            yearbox.FormattingEnabled = true;
+            yearbox.Items.AddRange(new object[] { "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "" });
+            yearbox.Location = new Point(194, 336);
+            yearbox.Name = "yearbox";
+            yearbox.Size = new Size(69, 23);
+            yearbox.TabIndex = 25;
+            // 
+            // userbox
+            // 
+            userbox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            userbox.ForeColor = Color.Gray;
+            userbox.Location = new Point(42, 201);
+            userbox.Multiline = true;
+            userbox.Name = "userbox";
+            userbox.Size = new Size(358, 37);
+            userbox.TabIndex = 26;
+            userbox.Tag = "";
+            userbox.Text = "Usuario";
+            userbox.TextAlign = HorizontalAlignment.Center;
             // 
             // registro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1063, 633);
-            Controls.Add(comboBox4);
-            Controls.Add(comboBox3);
-            Controls.Add(comboBox2);
+            Controls.Add(userbox);
+            Controls.Add(yearbox);
+            Controls.Add(mountbox);
+            Controls.Add(daybox);
             Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(Contrasena);
+            Controls.Add(clavebox);
             Controls.Add(comboBox1);
             Controls.Add(label2);
-            Controls.Add(Apellidousuario);
+            Controls.Add(lastnamebox);
             Controls.Add(Login);
-            Controls.Add(Correo);
-            Controls.Add(Nombreusuario);
+            Controls.Add(emailbox);
+            Controls.Add(namebox);
             Controls.Add(label1);
             Controls.Add(panel1);
             Name = "registro";
@@ -254,17 +270,18 @@
         private PictureBox pictureBox1;
         private Panel panel1;
         private Button Login;
-        private TextBox Correo;
-        private TextBox Nombreusuario;
+        private TextBox emailbox;
+        private TextBox namebox;
         private Label label1;
-        private TextBox Apellidousuario;
+        private TextBox lastnamebox;
         private Label label2;
         private ComboBox comboBox1;
-        private TextBox Contrasena;
+        private TextBox clavebox;
         private Label label3;
         private Label label4;
-        private ComboBox comboBox2;
-        private ComboBox comboBox3;
-        private ComboBox comboBox4;
+        private ComboBox daybox;
+        private ComboBox mountbox;
+        private ComboBox yearbox;
+        private TextBox userbox;
     }
 }
