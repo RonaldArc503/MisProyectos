@@ -37,14 +37,16 @@
             label1 = new Label();
             lastnamebox = new TextBox();
             label2 = new Label();
-            comboBox1 = new ComboBox();
+            genderbox = new ComboBox();
             clavebox = new TextBox();
             label3 = new Label();
             label4 = new Label();
             daybox = new ComboBox();
-            mountbox = new ComboBox();
+            monthbox = new ComboBox();
             yearbox = new ComboBox();
             userbox = new TextBox();
+            M = new CheckBox();
+            F = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -69,7 +71,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(527, 634);
             panel1.TabIndex = 1;
-            panel1.Paint += panel1_Paint;
             // 
             // Login
             // 
@@ -134,9 +135,8 @@
             lastnamebox.TabIndex = 15;
             lastnamebox.Text = "Apellido";
             lastnamebox.TextAlign = HorizontalAlignment.Center;
-            lastnamebox.TextChanged += Apellidousuario_TextChanged;
             lastnamebox.Enter += Apellidousuario_Enter;
-            lastnamebox.Leave += Apellidousuario_Leave;
+            lastnamebox.Leave += Contrasena_Leave;
             // 
             // label2
             // 
@@ -148,14 +148,14 @@
             label2.TabIndex = 16;
             label2.Text = "Fecha de Nacimiento";
             // 
-            // comboBox1
+            // genderbox
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Masculino", "Femenino" });
-            comboBox1.Location = new Point(42, 402);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 18;
+            genderbox.FormatString = "string";
+            genderbox.Items.AddRange(new object[] { "Masculino", "Femenino" });
+            genderbox.Location = new Point(42, 402);
+            genderbox.Name = "genderbox";
+            genderbox.Size = new Size(121, 23);
+            genderbox.TabIndex = 18;
             // 
             // clavebox
             // 
@@ -193,7 +193,7 @@
             label4.Size = new Size(132, 17);
             label4.TabIndex = 22;
             label4.Text = "Ya tienes una cuenta?";
-            label4.Click += label4_Click;
+            label4.Click += LoginYatengocuenta;
             // 
             // daybox
             // 
@@ -204,14 +204,14 @@
             daybox.Size = new Size(69, 23);
             daybox.TabIndex = 23;
             // 
-            // mountbox
+            // monthbox
             // 
-            mountbox.FormattingEnabled = true;
-            mountbox.Items.AddRange(new object[] { "Enero", "Febrero", "Marzo", "Abril ", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" });
-            mountbox.Location = new Point(117, 336);
-            mountbox.Name = "mountbox";
-            mountbox.Size = new Size(69, 23);
-            mountbox.TabIndex = 24;
+            monthbox.FormattingEnabled = true;
+            monthbox.Items.AddRange(new object[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" });
+            monthbox.Location = new Point(117, 336);
+            monthbox.Name = "monthbox";
+            monthbox.Size = new Size(69, 23);
+            monthbox.TabIndex = 24;
             // 
             // yearbox
             // 
@@ -234,20 +234,44 @@
             userbox.Tag = "";
             userbox.Text = "Usuario";
             userbox.TextAlign = HorizontalAlignment.Center;
+            userbox.Enter += user_Enter;
+            userbox.Leave += User_Leave;
+            // 
+            // M
+            // 
+            M.AutoSize = true;
+            M.Location = new Point(42, 455);
+            M.Name = "M";
+            M.Size = new Size(81, 19);
+            M.TabIndex = 27;
+            M.Text = "Masculino";
+            M.UseVisualStyleBackColor = true;
+            // 
+            // F
+            // 
+            F.AutoSize = true;
+            F.Location = new Point(42, 480);
+            F.Name = "F";
+            F.Size = new Size(79, 19);
+            F.TabIndex = 28;
+            F.Text = "Femenino";
+            F.UseVisualStyleBackColor = true;
             // 
             // registro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1063, 633);
+            Controls.Add(F);
+            Controls.Add(M);
             Controls.Add(userbox);
             Controls.Add(yearbox);
-            Controls.Add(mountbox);
+            Controls.Add(monthbox);
             Controls.Add(daybox);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(clavebox);
-            Controls.Add(comboBox1);
+            Controls.Add(genderbox);
             Controls.Add(label2);
             Controls.Add(lastnamebox);
             Controls.Add(Login);
@@ -258,7 +282,6 @@
             Name = "registro";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "registro";
-            Load += registro_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             ResumeLayout(false);
@@ -275,13 +298,15 @@
         private Label label1;
         private TextBox lastnamebox;
         private Label label2;
-        private ComboBox comboBox1;
+        private ComboBox genderbox;
         private TextBox clavebox;
         private Label label3;
         private Label label4;
         private ComboBox daybox;
-        private ComboBox mountbox;
+        private ComboBox monthbox;
         private ComboBox yearbox;
         private TextBox userbox;
+        private CheckBox M;
+        private CheckBox F;
     }
 }

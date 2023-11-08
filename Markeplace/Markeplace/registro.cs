@@ -20,55 +20,97 @@ namespace Markeplace
 
 
         }
-        //sql conectado
-        SqlConnection conexion = new SqlConnection("Server=DESKTOP-LALT64T; database=Marketplace; integrated security= true ");
+        //sql conectado a ServerR
+        SqlConnection conexion = new SqlConnection("Server=DESKTOP-LALT64T; database=Markeplace; integrated security= true ");
 
         private void RegistrarBD(object sender, EventArgs e)
         {
-            conexion.Open();
 
-            string name = namebox.Text;
-            string lastn = lastnamebox.Text;
-            string email = emailbox.Text;
-            string user = userbox.Text;
-            string clave = clavebox.Text;
-
-            string consulta = "INSERT INTO Usuarios (Nombre, Apellido, Correo, Usuario,Clave) " +
-                                "VALUES (@Name, @Lastn, @Email, @User,@Clave)";
-            using (SqlCommand comando = new SqlCommand(consulta, conexion))
+            try
             {
-                comando.Parameters.AddWithValue("@Name", name);
-                comando.Parameters.AddWithValue("@Lastn", lastn);
-                comando.Parameters.AddWithValue("@Email", email);
-                comando.Parameters.AddWithValue("@User", user);
-                comando.Parameters.AddWithValue("@Clave", clave);
-                comando.ExecuteNonQuery();
+                if (string.IsNullOrWhiteSpace(namebox.Text) ||
+                 string.IsNullOrWhiteSpace(lastnamebox.Text) ||
+                 string.IsNullOrWhiteSpace(emailbox.Text) ||
+                 string.IsNullOrWhiteSpace(userbox.Text) ||
+                 string.IsNullOrWhiteSpace(clavebox.Text) ||
+                 string.IsNullOrWhiteSpace(daybox.Text) ||
+                 string.IsNullOrWhiteSpace(monthbox.Text) ||
+                 string.IsNullOrWhiteSpace(yearbox.Text) ||
+                (namebox.Text == "Nombre" || lastnamebox.Text == "Apellido" || emailbox.Text == "Correo electronico" ||
+                 userbox.Text == "Usuario" || clavebox.Text == "Contraseña")
+                 )
+                {
 
-                MessageBox.Show("Usted se ha Registrado, Gracias.");
+
+                    MessageBox.Show("Faltan datos por llenar");
+                }
+
+                else
+                {
+
+                    conexion.Open();
+
+                    string name = namebox.Text;
+                    string lastn = lastnamebox.Text;
+                    string email = emailbox.Text;
+                    string user = userbox.Text;
+                    string clave = clavebox.Text;
+
+                    int day = int.Parse(daybox.Text);
+                    int month = int.Parse(monthbox.Text);
+                    int year = int.Parse(yearbox.Text);
+                    // string genero = genderbox.Text;
+
+
+
+                    DateTime fechaNacimiento = new DateTime(year, month, day);
+
+
+
+                    string consulta = "INSERT INTO Usuarios (Nombre, Apellido, Correo, Usuario,Clave,fecha_nacimiento) " +
+                                        "VALUES (@Name, @Lastn, @Email, @User,@Clave,@FechaNacimiento )";
+                    using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@Name", name);
+                        comando.Parameters.AddWithValue("@Lastn", lastn);
+                        comando.Parameters.AddWithValue("@Email", email);
+                        comando.Parameters.AddWithValue("@User", user);
+                        comando.Parameters.AddWithValue("@Clave", clave);
+                        comando.Parameters.AddWithValue("@FechaNacimiento", fechaNacimiento);
+                        //    comando.Parameters.AddWithValue("@Genero", genero);
+                        comando.ExecuteNonQuery();
+
+                        MessageBox.Show("Usted se ha Registrado, Gracias.");
+                    }
+                }
             }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lo siento, ya se Registro o vuela a intentarlo mas tarde");
+            }
+
+
+
+
         }
 
-
-
-
-
-
-
-
-        private void registro_Load(object sender, EventArgs e)
+        private void LoginYatengocuenta(object sender, EventArgs e)
         {
+            Form1 Fm = new Form1();
 
+            this.Hide();
+            Fm.ShowDialog();
+            this.Close();
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
+        // los efectos 
 
         private void Nombreusuario_Enter(object sender, EventArgs e)
         {
-            if (namebox.Text == "Nombres")
+            if (namebox.Text == "Nombre")
             {
                 namebox.Text = "";
                 namebox.ForeColor = Color.Black;
@@ -80,14 +122,14 @@ namespace Markeplace
         {
             if (namebox.Text == "")
             {
-                namebox.Text = "Nombres";
+                namebox.Text = "Nombre";
                 namebox.ForeColor = Color.Gray;
             }
         }
 
         private void Apellidousuario_Enter(object sender, EventArgs e)
         {
-            if (lastnamebox.Text == "Apellidos")
+            if (lastnamebox.Text == "Apellido")
             {
                 lastnamebox.Text = "";
                 lastnamebox.ForeColor = Color.Black;
@@ -98,7 +140,7 @@ namespace Markeplace
         {
             if (lastnamebox.Text == "")
             {
-                lastnamebox.Text = "Apellidos";
+                lastnamebox.Text = "Apellido";
                 lastnamebox.ForeColor = Color.Gray;
             }
         }
@@ -138,24 +180,24 @@ namespace Markeplace
                 clavebox.ForeColor = Color.Gray;
             }
         }
-
-        private void label4_Click(object sender, EventArgs e)
+        private void User_Leave(object sender, EventArgs e)
         {
-            Form1 Fm = new Form1();
+            if (userbox.Text == " ")
+            {
+                userbox.Text = "Usuario";
+                userbox.ForeColor = Color.Gray;
+            }
+        }
 
-            this.Hide();
-            Fm.ShowDialog();
-            this.Close();
-
+        private void user_Enter(object sender, EventArgs e)
+        {
+            if (userbox.Text == "Usuario")
+            {
+                userbox.Text = " ";
+                userbox.ForeColor = Color.Black;
+            }
         }
 
 
-
-
-
-        private void Apellidousuario_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

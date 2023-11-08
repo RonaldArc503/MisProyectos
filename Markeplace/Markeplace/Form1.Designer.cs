@@ -33,8 +33,8 @@
             pictureBox1 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
-            Usuario = new TextBox();
-            Contrasena = new TextBox();
+            user = new TextBox();
+            password = new TextBox();
             label3 = new Label();
             label4 = new Label();
             Login = new Button();
@@ -83,25 +83,25 @@
             label2.TabIndex = 2;
             label2.Text = "User:";
             // 
-            // Usuario
+            // user
             // 
-            Usuario.Font = new Font("SimSun-ExtB", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            Usuario.Location = new Point(579, 254);
-            Usuario.Multiline = true;
-            Usuario.Name = "Usuario";
-            Usuario.Size = new Size(409, 37);
-            Usuario.TabIndex = 3;
-            Usuario.TextChanged += textBox1_TextChanged;
+            user.Font = new Font("SimSun-ExtB", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            user.Location = new Point(579, 254);
+            user.Multiline = true;
+            user.Name = "user";
+            user.Size = new Size(409, 37);
+            user.TabIndex = 3;
+            user.TextChanged += textBox1_TextChanged;
             // 
-            // Contrasena
+            // password
             // 
-            Contrasena.Font = new Font("SimSun-ExtB", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            Contrasena.Location = new Point(579, 348);
-            Contrasena.Multiline = true;
-            Contrasena.Name = "Contrasena";
-            Contrasena.Size = new Size(409, 37);
-            Contrasena.TabIndex = 4;
-            Contrasena.Tag = "";
+            password.Font = new Font("SimSun-ExtB", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            password.Location = new Point(579, 348);
+            password.Multiline = true;
+            password.Name = "password";
+            password.Size = new Size(409, 37);
+            password.TabIndex = 4;
+            password.Tag = "";
             // 
             // label3
             // 
@@ -137,6 +137,7 @@
             Login.TabIndex = 7;
             Login.Text = "Login";
             Login.UseVisualStyleBackColor = false;
+            Login.Click += Login_Click;
             // 
             // Form1
             // 
@@ -146,8 +147,8 @@
             ClientSize = new Size(1063, 633);
             Controls.Add(Login);
             Controls.Add(label3);
-            Controls.Add(Contrasena);
-            Controls.Add(Usuario);
+            Controls.Add(password);
+            Controls.Add(user);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(panel1);
@@ -167,8 +168,8 @@
         private Panel panel1;
         private Label label1;
         private Label label2;
-        private TextBox Usuario;
-        private TextBox Contrasena;
+        private TextBox user;
+        private TextBox password;
         private Label label3;
         private Label label4;
         private PictureBox pictureBox1;
