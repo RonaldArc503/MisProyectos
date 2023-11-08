@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Markeplace
 {
-    public partial class Inicio : Form
+    public partial class Perfil : Form
     {
-        public Inicio()
+        public Perfil()
         {
             InitializeComponent();
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Inicio_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
