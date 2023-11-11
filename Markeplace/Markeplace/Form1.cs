@@ -94,7 +94,7 @@ namespace Markeplace
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("error vuelva a inetear");
+                MessageBox.Show("error vuelva a intentar");
             }
         }
 
