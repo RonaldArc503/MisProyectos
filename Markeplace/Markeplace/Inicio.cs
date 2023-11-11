@@ -19,7 +19,9 @@ namespace Markeplace
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-
+            Perfil Dats = new Perfil();
+            Dats.Show();
+            Hide();
         }
 
         private void Inicio_Load(object sender, EventArgs e)

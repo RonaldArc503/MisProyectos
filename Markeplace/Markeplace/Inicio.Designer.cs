@@ -35,9 +35,18 @@
             textBox1 = new TextBox();
             label2 = new Label();
             button1 = new Button();
+            menuStrip1 = new MenuStrip();
+            inmueblesToolStripMenuItem = new ToolStripMenuItem();
+            cocinaToolStripMenuItem = new ToolStripMenuItem();
+            automovilesToolStripMenuItem = new ToolStripMenuItem();
+            juguetesToolStripMenuItem = new ToolStripMenuItem();
+            eléctronicosToolStripMenuItem = new ToolStripMenuItem();
+            toolStripContainer1 = new ToolStripContainer();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            menuStrip1.SuspendLayout();
+            toolStripContainer1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -107,12 +116,66 @@
             button1.Text = "Buscar";
             button1.UseVisualStyleBackColor = false;
             // 
+            // menuStrip1
+            // 
+            menuStrip1.Dock = DockStyle.None;
+            menuStrip1.Items.AddRange(new ToolStripItem[] { inmueblesToolStripMenuItem, cocinaToolStripMenuItem, automovilesToolStripMenuItem, juguetesToolStripMenuItem, eléctronicosToolStripMenuItem });
+            menuStrip1.Location = new Point(-1, 88);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(372, 24);
+            menuStrip1.TabIndex = 1;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // inmueblesToolStripMenuItem
+            // 
+            inmueblesToolStripMenuItem.Name = "inmueblesToolStripMenuItem";
+            inmueblesToolStripMenuItem.Size = new Size(74, 20);
+            inmueblesToolStripMenuItem.Text = "Inmuebles";
+            // 
+            // cocinaToolStripMenuItem
+            // 
+            cocinaToolStripMenuItem.Name = "cocinaToolStripMenuItem";
+            cocinaToolStripMenuItem.Size = new Size(56, 20);
+            cocinaToolStripMenuItem.Text = "Cocina";
+            // 
+            // automovilesToolStripMenuItem
+            // 
+            automovilesToolStripMenuItem.Name = "automovilesToolStripMenuItem";
+            automovilesToolStripMenuItem.Size = new Size(86, 20);
+            automovilesToolStripMenuItem.Text = "Automoviles";
+            // 
+            // juguetesToolStripMenuItem
+            // 
+            juguetesToolStripMenuItem.Name = "juguetesToolStripMenuItem";
+            juguetesToolStripMenuItem.Size = new Size(65, 20);
+            juguetesToolStripMenuItem.Text = "Juguetes";
+            // 
+            // eléctronicosToolStripMenuItem
+            // 
+            eléctronicosToolStripMenuItem.Name = "eléctronicosToolStripMenuItem";
+            eléctronicosToolStripMenuItem.Size = new Size(83, 20);
+            eléctronicosToolStripMenuItem.Text = "Eléctronicos";
+            // 
+            // toolStripContainer1
+            // 
+            // 
+            // toolStripContainer1.ContentPanel
+            // 
+            toolStripContainer1.ContentPanel.Size = new Size(150, 31);
+            toolStripContainer1.Location = new Point(1072, 599);
+            toolStripContainer1.Name = "toolStripContainer1";
+            toolStripContainer1.Size = new Size(150, 31);
+            toolStripContainer1.TabIndex = 2;
+            toolStripContainer1.Text = "toolStripContainer1";
+            // 
             // Inicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(229, 229, 229);
             ClientSize = new Size(1223, 629);
+            Controls.Add(menuStrip1);
+            Controls.Add(toolStripContainer1);
             Controls.Add(panel1);
             Name = "Inicio";
             StartPosition = FormStartPosition.CenterScreen;
@@ -122,7 +185,12 @@
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            toolStripContainer1.ResumeLayout(false);
+            toolStripContainer1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -133,5 +201,12 @@
         private TextBox textBox1;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
+        private MenuStrip menuStrip1;
+        private ToolStripContainer toolStripContainer1;
+        private ToolStripMenuItem inmueblesToolStripMenuItem;
+        private ToolStripMenuItem cocinaToolStripMenuItem;
+        private ToolStripMenuItem automovilesToolStripMenuItem;
+        private ToolStripMenuItem juguetesToolStripMenuItem;
+        private ToolStripMenuItem eléctronicosToolStripMenuItem;
     }
 }
