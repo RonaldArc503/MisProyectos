@@ -21,7 +21,7 @@ namespace Markeplace
 
         }
         //sql conectado a ServerR
-        SqlConnection conexion = new SqlConnection("Server=DESKTOP-LALT64T; database=Markeplace; integrated security= true ");
+        SqlConnection conexion = new SqlConnection("Server=LAPTOP-CC25DF46; database=Markeplace; integrated security= true ");
 
         private void RegistrarBD(object sender, EventArgs e)
         {

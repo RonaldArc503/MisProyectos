@@ -43,7 +43,7 @@ namespace Markeplace
                 string contraseña = password.Text;
 
                 //conectado a server R
-                string connectionString = "Server=DESKTOP-LALT64T; database=Markeplace; Integrated security= true ";
+                string connectionString = "Server=LAPTOP-CC25DF46; database=Markeplace; Integrated security= true ";
 
                 using (SqlConnection conexion = new SqlConnection(connectionString))
                 {
@@ -62,7 +62,10 @@ namespace Markeplace
                         
                         if (resultadoAdmin > 0)
                         {
-                           //yo
+                            //yo
+                            this.Hide();
+                            Pantalla_de_carga carga = new Pantalla_de_carga();
+                            carga.ShowDialog();
                             Administradores Admins = new Administradores();
                             Admins.Show();
                            
@@ -81,13 +84,16 @@ namespace Markeplace
                         if (resultadoUsuario > 0)
                         {
                             // user normales
+                            this.Hide();
+                            Pantalla_de_carga carga = new Pantalla_de_carga();
+                            carga.ShowDialog();
                            Inicio Finicio = new Inicio();
                            Finicio.Show();
                            
                         }
                         else
                         {
-                        //    MessageBox.Show("No hay cuenta para estos datos. Regístrate.");
+                           MessageBox.Show("No hay cuenta para estos datos. Regístrate.");
                         }
                     }
                 }
