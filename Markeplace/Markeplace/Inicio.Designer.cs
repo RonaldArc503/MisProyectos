@@ -34,14 +34,16 @@
             pictureBox1 = new PictureBox();
             textBox1 = new TextBox();
             label2 = new Label();
-            button1 = new Button();
+            Btnbuscar = new Button();
             menuStrip1 = new MenuStrip();
-            inmueblesToolStripMenuItem = new ToolStripMenuItem();
-            cocinaToolStripMenuItem = new ToolStripMenuItem();
-            automovilesToolStripMenuItem = new ToolStripMenuItem();
-            juguetesToolStripMenuItem = new ToolStripMenuItem();
-            eléctronicosToolStripMenuItem = new ToolStripMenuItem();
             toolStripContainer1 = new ToolStripContainer();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            menuToolStripMenuItem = new ToolStripMenuItem();
+            inmuebleToolStripMenuItem = new ToolStripMenuItem();
+            cocinaToolStripMenuItem = new ToolStripMenuItem();
+            electródomesticoToolStripMenuItem = new ToolStripMenuItem();
+            electrónicaToolStripMenuItem = new ToolStripMenuItem();
+            jugueteriaToolStripMenuItem = new ToolStripMenuItem();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -52,11 +54,12 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(26, 176, 140);
+            panel1.Controls.Add(menuStrip1);
+            panel1.Controls.Add(Btnbuscar);
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(textBox1);
             panel1.Controls.Add(label2);
-            panel1.Controls.Add(button1);
             panel1.Location = new Point(-1, 1);
             panel1.Margin = new Padding(0);
             panel1.Name = "panel1";
@@ -66,7 +69,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(1166, 16);
+            pictureBox2.Location = new Point(829, 22);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(46, 46);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -88,7 +91,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(649, 27);
+            textBox1.Location = new Point(404, 29);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(369, 33);
@@ -106,58 +109,32 @@
             label2.TabIndex = 2;
             label2.Text = "Bambu forest";
             // 
-            // button1
+            // Btnbuscar
             // 
-            button1.BackColor = Color.FromArgb(23, 140, 112);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(1024, 26);
-            button1.Name = "button1";
-            button1.Size = new Size(127, 36);
-            button1.TabIndex = 1;
-            button1.Text = "Buscar";
-            button1.UseVisualStyleBackColor = false;
+            Btnbuscar.BackColor = Color.Transparent;
+            Btnbuscar.BackgroundImage = (Image)resources.GetObject("Btnbuscar.BackgroundImage");
+            Btnbuscar.BackgroundImageLayout = ImageLayout.Stretch;
+            Btnbuscar.FlatAppearance.BorderColor = Color.FromArgb(26, 176, 140);
+            Btnbuscar.FlatAppearance.BorderSize = 0;
+            Btnbuscar.FlatStyle = FlatStyle.Flat;
+            Btnbuscar.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            Btnbuscar.ForeColor = Color.White;
+            Btnbuscar.Location = new Point(404, 25);
+            Btnbuscar.Name = "Btnbuscar";
+            Btnbuscar.Size = new Size(40, 40);
+            Btnbuscar.TabIndex = 1;
+            Btnbuscar.UseVisualStyleBackColor = false;
             // 
             // menuStrip1
             // 
+            menuStrip1.BackColor = Color.Transparent;
             menuStrip1.Dock = DockStyle.None;
-            menuStrip1.Items.AddRange(new ToolStripItem[] { inmueblesToolStripMenuItem, cocinaToolStripMenuItem, automovilesToolStripMenuItem, juguetesToolStripMenuItem, eléctronicosToolStripMenuItem });
-            menuStrip1.Location = new Point(-1, 88);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { menuToolStripMenuItem });
+            menuStrip1.Location = new Point(298, 36);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(372, 24);
+            menuStrip1.Size = new Size(58, 24);
             menuStrip1.TabIndex = 1;
-            menuStrip1.Text = "menuStrip1";
-            // 
-            // inmueblesToolStripMenuItem
-            // 
-            inmueblesToolStripMenuItem.Name = "inmueblesToolStripMenuItem";
-            inmueblesToolStripMenuItem.Size = new Size(74, 20);
-            inmueblesToolStripMenuItem.Text = "Inmuebles";
-            // 
-            // cocinaToolStripMenuItem
-            // 
-            cocinaToolStripMenuItem.Name = "cocinaToolStripMenuItem";
-            cocinaToolStripMenuItem.Size = new Size(56, 20);
-            cocinaToolStripMenuItem.Text = "Cocina";
-            // 
-            // automovilesToolStripMenuItem
-            // 
-            automovilesToolStripMenuItem.Name = "automovilesToolStripMenuItem";
-            automovilesToolStripMenuItem.Size = new Size(86, 20);
-            automovilesToolStripMenuItem.Text = "Automoviles";
-            // 
-            // juguetesToolStripMenuItem
-            // 
-            juguetesToolStripMenuItem.Name = "juguetesToolStripMenuItem";
-            juguetesToolStripMenuItem.Size = new Size(65, 20);
-            juguetesToolStripMenuItem.Text = "Juguetes";
-            // 
-            // eléctronicosToolStripMenuItem
-            // 
-            eléctronicosToolStripMenuItem.Name = "eléctronicosToolStripMenuItem";
-            eléctronicosToolStripMenuItem.Size = new Size(83, 20);
-            eléctronicosToolStripMenuItem.Text = "Eléctronicos";
+            menuStrip1.Text = "Opciones";
             // 
             // toolStripContainer1
             // 
@@ -171,13 +148,50 @@
             toolStripContainer1.TabIndex = 2;
             toolStripContainer1.Text = "toolStripContainer1";
             // 
+            // menuToolStripMenuItem
+            // 
+            menuToolStripMenuItem.BackColor = Color.White;
+            menuToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { inmuebleToolStripMenuItem, cocinaToolStripMenuItem, electródomesticoToolStripMenuItem, electrónicaToolStripMenuItem, jugueteriaToolStripMenuItem });
+            menuToolStripMenuItem.Name = "menuToolStripMenuItem";
+            menuToolStripMenuItem.Size = new Size(50, 20);
+            menuToolStripMenuItem.Text = "Menú";
+            // 
+            // inmuebleToolStripMenuItem
+            // 
+            inmuebleToolStripMenuItem.Name = "inmuebleToolStripMenuItem";
+            inmuebleToolStripMenuItem.Size = new Size(180, 22);
+            inmuebleToolStripMenuItem.Text = "Inmueble";
+            // 
+            // cocinaToolStripMenuItem
+            // 
+            cocinaToolStripMenuItem.Name = "cocinaToolStripMenuItem";
+            cocinaToolStripMenuItem.Size = new Size(180, 22);
+            cocinaToolStripMenuItem.Text = "Cocina";
+            // 
+            // electródomesticoToolStripMenuItem
+            // 
+            electródomesticoToolStripMenuItem.Name = "electródomesticoToolStripMenuItem";
+            electródomesticoToolStripMenuItem.Size = new Size(180, 22);
+            electródomesticoToolStripMenuItem.Text = "Electródomestico";
+            // 
+            // electrónicaToolStripMenuItem
+            // 
+            electrónicaToolStripMenuItem.Name = "electrónicaToolStripMenuItem";
+            electrónicaToolStripMenuItem.Size = new Size(180, 22);
+            electrónicaToolStripMenuItem.Text = "Electrónica";
+            // 
+            // jugueteriaToolStripMenuItem
+            // 
+            jugueteriaToolStripMenuItem.Name = "jugueteriaToolStripMenuItem";
+            jugueteriaToolStripMenuItem.Size = new Size(180, 22);
+            jugueteriaToolStripMenuItem.Text = "Jugueteria";
+            // 
             // Inicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(229, 229, 229);
-            ClientSize = new Size(1223, 629);
-            Controls.Add(menuStrip1);
+            ClientSize = new Size(877, 629);
             Controls.Add(toolStripContainer1);
             Controls.Add(panel1);
             Name = "Inicio";
@@ -193,23 +207,24 @@
             toolStripContainer1.ResumeLayout(false);
             toolStripContainer1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private Panel panel1;
         private Label label2;
-        private Button button1;
+        private Button Btnbuscar;
         private TextBox textBox1;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private MenuStrip menuStrip1;
         private ToolStripContainer toolStripContainer1;
-        private ToolStripMenuItem inmueblesToolStripMenuItem;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private ToolStripMenuItem menuToolStripMenuItem;
+        private ToolStripMenuItem inmuebleToolStripMenuItem;
         private ToolStripMenuItem cocinaToolStripMenuItem;
-        private ToolStripMenuItem automovilesToolStripMenuItem;
-        private ToolStripMenuItem juguetesToolStripMenuItem;
-        private ToolStripMenuItem eléctronicosToolStripMenuItem;
+        private ToolStripMenuItem electródomesticoToolStripMenuItem;
+        private ToolStripMenuItem electrónicaToolStripMenuItem;
+        private ToolStripMenuItem jugueteriaToolStripMenuItem;
     }
 }

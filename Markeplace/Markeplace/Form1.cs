@@ -63,9 +63,12 @@ namespace Markeplace
                         if (resultadoAdmin > 0)
                         {
                             //yo
-                            this.Hide();
+                           
                             Administradores Admins = new Administradores();
-                            Admins.Show();
+                            Hide();
+                            Admins.ShowDialog();
+                            Close();
+                            
                            
                         }
                     }
@@ -82,10 +85,12 @@ namespace Markeplace
                         if (resultadoUsuario > 0)
                         {
                             // user normales
-                            this.Hide();
                         
                            Inicio Finicio = new Inicio();
-                           Finicio.Show();
+                            Hide();
+                            Finicio.ShowDialog();
+                            Close();
+                           
                            
                         }
                         else
