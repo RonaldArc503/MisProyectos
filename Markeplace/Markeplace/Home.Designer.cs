@@ -78,7 +78,7 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(246, 62);
             panel2.TabIndex = 14;
-            panel2.Paint += panel2_Paint;
+            panel2.Click += panel2_Click;
             // 
             // pictureBox3
             // 
@@ -111,7 +111,7 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(246, 62);
             panel3.TabIndex = 13;
-            panel3.Paint += panel3_Paint;
+            panel3.Click += panel3_Click;
             // 
             // pictureBox2
             // 

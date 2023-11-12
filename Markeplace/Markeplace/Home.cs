@@ -22,22 +22,37 @@ namespace Markeplace
 
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
+        private void loginda(object sender, PaintEventArgs e)
+        {
+
+
+        }
+
+        private void panel3_Click(object sender, EventArgs e)
         {
             Form1 Fm = new Form1();
 
-            this.Hide();
+            Hide();
             Fm.ShowDialog();
-            this.Close();
+            Close();
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void panel2_Click(object sender, EventArgs e)
         {
             registro rt = new registro();
+            Hide();
 
-            this.Hide();
             rt.ShowDialog();
-            this.Close();
+            Close();
         }
+
+        //  private void panel2_Paint(object sender, PaintEventArgs e)
+        //    {
+        //        registro rt = new registro();
+
+
+        //      rt.Show();
+
+        //   }
     }
 }
