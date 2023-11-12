@@ -64,7 +64,7 @@ namespace Markeplace
                         {
                             //yo
                             this.Hide();
-                            Pantalla_de_carga carga = new Pantalla_de_carga();
+                            welcome carga = new welcome();
                             carga.ShowDialog();
                             Administradores Admins = new Administradores();
                             Admins.Show();
@@ -85,7 +85,7 @@ namespace Markeplace
                         {
                             // user normales
                             this.Hide();
-                            Pantalla_de_carga carga = new Pantalla_de_carga();
+                            welcome carga = new welcome();
                             carga.ShowDialog();
                            Inicio Finicio = new Inicio();
                            Finicio.Show();
