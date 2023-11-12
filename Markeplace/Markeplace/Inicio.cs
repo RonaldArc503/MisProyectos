@@ -15,6 +15,22 @@ namespace Markeplace
         public Inicio()
         {
             InitializeComponent();
+            personalizardiseño();
+        }
+        private void personalizardiseño() 
+        {
+         panelsubmenu1.Visible = false;
+         panelsubmenu2.Visible = false;
+         panelsubmenu3.Visible = false;
+        }
+
+        private void hidesubmenu() 
+        {
+            if (panelsubmenu1.Visible == true)
+                panelsubmenu1.Visible = false;
+            if (panelsubmenu2.Visible == true)
+                panelsubmenu2.Visible = false;
+
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
