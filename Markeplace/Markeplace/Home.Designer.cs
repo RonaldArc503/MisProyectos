@@ -90,6 +90,7 @@
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 11;
             pictureBox3.TabStop = false;
+            pictureBox3.Click += panel2_Click;
             // 
             // label3
             // 
@@ -100,6 +101,7 @@
             label3.Size = new Size(112, 32);
             label3.TabIndex = 7;
             label3.Text = "Registrar";
+            label3.Click += panel2_Click;
             // 
             // panel3
             // 
@@ -123,6 +125,7 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 10;
             pictureBox2.TabStop = false;
+            pictureBox2.Click += panel3_Click;
             // 
             // label1
             // 
@@ -133,6 +136,7 @@
             label1.Size = new Size(77, 32);
             label1.TabIndex = 6;
             label1.Text = "Login";
+            label1.Click += panel3_Click;
             // 
             // label2
             // 
