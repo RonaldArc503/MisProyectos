@@ -17,11 +17,11 @@ namespace Markeplace
             InitializeComponent();
 
         }
-       
+
 
         private void Administradores_Load(object sender, EventArgs e)
         {
-           Form1 frm = new Form1();
+            Form1 frm = new Form1();
             frm.Close();
         }
     }

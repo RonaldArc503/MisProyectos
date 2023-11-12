@@ -12,7 +12,7 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\efsf1\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Win10\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\efsf1\\.nuget\\packages"
     ],
     "configProperties": {
