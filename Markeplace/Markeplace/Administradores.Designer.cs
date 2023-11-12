@@ -28,46 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            this.SuspendLayout();
-            // 
-            // button1
-            // 
-       
-            // lastntable
-            // 
-        
-            // 
-            // correotable
-            // 
-           
-            // 
-            // usertable
-            // 
-          
-            // 
-            // calvetable
-            // 
-          
-            // 
-            // borntable
-            // 
-           
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administradores));
+            SuspendLayout();
             // 
             // Administradores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1159, 540);
-        
-            this.Name = "Administradores";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Administradores";
-            this.Load += this.Administradores_Load;
-           
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1159, 540);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Name = "Administradores";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Administradores";
+            Load += Administradores_Load;
+            ResumeLayout(false);
         }
 
         #endregion

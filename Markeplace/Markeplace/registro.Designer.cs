@@ -280,6 +280,7 @@
             Controls.Add(namebox);
             Controls.Add(label1);
             Controls.Add(panel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "registro";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "registro";

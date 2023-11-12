@@ -153,6 +153,7 @@
             Controls.Add(label1);
             Controls.Add(panel1);
             Controls.Add(label4);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";

@@ -159,6 +159,7 @@
             Controls.Add(panel2);
             Controls.Add(panel3);
             Controls.Add(panel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Home";
             Text = "Home";
             panel1.ResumeLayout(false);

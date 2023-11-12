@@ -49,7 +49,7 @@ namespace Markeplace
                 {
                     conexion.Open();
 
-                //los admins
+                    //los admins
                     string consultaAdmin = "SELECT COUNT(*) FROM Administradores WHERE Super_usuario = @SUsuario AND Clave = @Clave";
                     using (SqlCommand comando = new SqlCommand(consultaAdmin, conexion))
                     {
@@ -58,22 +58,22 @@ namespace Markeplace
 
                         int resultadoAdmin = (int)comando.ExecuteScalar();
 
-                      
-                        
+
+
                         if (resultadoAdmin > 0)
                         {
                             //yo
-                           
+
                             Administradores Admins = new Administradores();
                             Hide();
                             Admins.ShowDialog();
                             Close();
-                            
-                           
+
+
                         }
                     }
 
-                 
+
                     string consultaUsuario = "SELECT COUNT(*) FROM Usuarios WHERE Usuario = @Usuario AND Clave = @Contraseña";
                     using (SqlCommand comando = new SqlCommand(consultaUsuario, conexion))
                     {
@@ -85,17 +85,17 @@ namespace Markeplace
                         if (resultadoUsuario > 0)
                         {
                             // user normales
-                        
-                           Inicio Finicio = new Inicio();
+
+                            Inicio Finicio = new Inicio();
                             Hide();
                             Finicio.ShowDialog();
                             Close();
-                           
-                           
+
+
                         }
                         else
                         {
-                           MessageBox.Show("No hay cuenta para estos datos. Regístrate.");
+                            MessageBox.Show("No hay cuenta para estos datos. Regístrate.");
                         }
                     }
                 }
