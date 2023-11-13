@@ -71,7 +71,7 @@ namespace Markeplace
             {
                 MessageBox.Show("Datos actualizados");
             }
-            llenar_tabla();
+
             conexion.Close();
 
 
@@ -187,12 +187,22 @@ namespace Markeplace
             }
         }
 
-        private void llenardatos_Click(object sender, EventArgs e)
+        private void verdatosactualizados_Click(object sender, EventArgs e)
         {
             llenar_tabla();
         }
 
         private void clavebox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            usuariosview.Visible = !usuariosview.Visible;
+        }
+
+        private void panel8_Paint(object sender, PaintEventArgs e)
         {
 
         }
