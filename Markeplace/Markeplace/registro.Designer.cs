@@ -37,16 +37,12 @@
             label1 = new Label();
             lastnamebox = new TextBox();
             label2 = new Label();
-            genderbox = new ComboBox();
             clavebox = new TextBox();
-            label3 = new Label();
             label4 = new Label();
             daybox = new ComboBox();
             monthbox = new ComboBox();
             yearbox = new ComboBox();
             userbox = new TextBox();
-            M = new CheckBox();
-            F = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -148,15 +144,6 @@
             label2.TabIndex = 16;
             label2.Text = "Fecha de Nacimiento";
             // 
-            // genderbox
-            // 
-            genderbox.FormatString = "string";
-            genderbox.Items.AddRange(new object[] { "Masculino", "Femenino" });
-            genderbox.Location = new Point(42, 402);
-            genderbox.Name = "genderbox";
-            genderbox.Size = new Size(121, 23);
-            genderbox.TabIndex = 18;
-            // 
             // clavebox
             // 
             clavebox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -171,16 +158,6 @@
             clavebox.TextAlign = HorizontalAlignment.Center;
             clavebox.Enter += Contrasena_Enter;
             clavebox.Leave += Contrasena_Leave;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(42, 374);
-            label3.Name = "label3";
-            label3.Size = new Size(78, 25);
-            label3.TabIndex = 21;
-            label3.Text = "Género";
             // 
             // label4
             // 
@@ -237,42 +214,18 @@
             userbox.Enter += user_Enter;
             userbox.Leave += User_Leave;
             // 
-            // M
-            // 
-            M.AutoSize = true;
-            M.Location = new Point(42, 455);
-            M.Name = "M";
-            M.Size = new Size(81, 19);
-            M.TabIndex = 27;
-            M.Text = "Masculino";
-            M.UseVisualStyleBackColor = true;
-            // 
-            // F
-            // 
-            F.AutoSize = true;
-            F.Location = new Point(42, 480);
-            F.Name = "F";
-            F.Size = new Size(79, 19);
-            F.TabIndex = 28;
-            F.Text = "Femenino";
-            F.UseVisualStyleBackColor = true;
-            // 
             // registro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1063, 633);
-            Controls.Add(F);
-            Controls.Add(M);
             Controls.Add(userbox);
             Controls.Add(yearbox);
             Controls.Add(monthbox);
             Controls.Add(daybox);
             Controls.Add(label4);
-            Controls.Add(label3);
             Controls.Add(clavebox);
-            Controls.Add(genderbox);
             Controls.Add(label2);
             Controls.Add(lastnamebox);
             Controls.Add(Login);
@@ -300,15 +253,11 @@
         private Label label1;
         private TextBox lastnamebox;
         private Label label2;
-        private ComboBox genderbox;
         private TextBox clavebox;
-        private Label label3;
         private Label label4;
         private ComboBox daybox;
         private ComboBox monthbox;
         private ComboBox yearbox;
         private TextBox userbox;
-        private CheckBox M;
-        private CheckBox F;
     }
 }

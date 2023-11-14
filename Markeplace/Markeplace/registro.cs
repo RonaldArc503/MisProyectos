@@ -21,8 +21,8 @@ namespace Markeplace
 
         }
         //sql conectado a ServerR
-        SqlConnection conexion = new SqlConnection("Server=LAPTOP-CC25DF46; database=Markeplace; integrated security= true ");
-
+        // SqlConnection conexion = new SqlConnection("Server=LAPTOP-CC25DF46; database=Markeplace; integrated security= true ");  //erick
+        SqlConnection conexion = new SqlConnection("Server=DESKTOP-LALT64T; database=Markeplace; integrated security= true ");      //ronald
         private void RegistrarBD(object sender, EventArgs e)
         {
 
@@ -81,6 +81,13 @@ namespace Markeplace
                         comando.ExecuteNonQuery();
 
                         MessageBox.Show("Usted se ha Registrado, Gracias.");
+
+
+                        Form1 Fm = new Form1();
+
+                        this.Hide();
+                        Fm.ShowDialog();
+                        this.Close();
                     }
                 }
             }
@@ -182,7 +189,7 @@ namespace Markeplace
         }
         private void User_Leave(object sender, EventArgs e)
         {
-            if (userbox.Text == " ")
+            if (userbox.Text == "")
             {
                 userbox.Text = "Usuario";
                 userbox.ForeColor = Color.Gray;
@@ -193,7 +200,7 @@ namespace Markeplace
         {
             if (userbox.Text == "Usuario")
             {
-                userbox.Text = " ";
+                userbox.Text = "";
                 userbox.ForeColor = Color.Black;
             }
         }

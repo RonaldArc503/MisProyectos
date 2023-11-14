@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dx/Lzup/5LIHpsLefuoBjE93DdCN3aUcbxTrtRsiiKiS/+c+6q890umIQ8siqzh2VCL3TrGw303lS+/pc6hyhQ==",
+  "dgSpecHash": "fVpLqSeCM4osJ8xeIKofFXOBoQ9Yr7vFZL1rOrbGWxTuuocTzg8fHr1XUTVyYAgp3SM7dh69ctE7zRmDnc6r3Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Win10\\Desktop\\ProyectoFinal\\Nueva carpeta\\RonaldArc503\\MisProyectos\\Markeplace\\Markeplace\\Markeplace.csproj",
+  "projectFilePath": "C:\\Users\\Win10\\Desktop\\01\\RonaldArc503\\MisProyectos\\Markeplace\\Markeplace\\Markeplace.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Win10\\.nuget\\packages\\circularprogressbar\\2.8.0.16\\circularprogressbar.2.8.0.16.nupkg.sha512",
     "C:\\Users\\Win10\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",

@@ -43,7 +43,8 @@ namespace Markeplace
                 string contraseña = password.Text;
 
                 //conectado a server R
-                string connectionString = "Server=LAPTOP-CC25DF46; database=Markeplace; Integrated security= true ";
+                //string connectionString = "Server=LAPTOP-CC25DF46; database=Markeplace; Integrated security= true ";     // base erik
+                string connectionString = "Server=DESKTOP-LALT64T; database=Markeplace; integrated security= true ";        // ronald db
 
                 using (SqlConnection conexion = new SqlConnection(connectionString))
                 {
@@ -86,7 +87,7 @@ namespace Markeplace
                         {
                             // user normales
 
-                            Inicio Finicio = new Inicio();
+                            Marketplace Finicio = new Marketplace();
                             Hide();
                             Finicio.ShowDialog();
                             Close();
