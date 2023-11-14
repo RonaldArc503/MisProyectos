@@ -37,7 +37,7 @@
             emailbox = new TextBox();
             namebox = new TextBox();
             label1 = new Label();
-            dataGridView2 = new DataGridView();
+            datauser = new DataGridView();
             idbox = new TextBox();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
@@ -49,46 +49,49 @@
             textBox8 = new TextBox();
             button4 = new Button();
             usuariosview = new Panel();
+            label3 = new Label();
             panel2 = new Panel();
             pictureBox4 = new PictureBox();
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
-            panel7 = new Panel();
+            viewadmin = new Panel();
+            label2 = new Label();
             textBox23 = new TextBox();
             panel8 = new Panel();
             pictureBox9 = new PictureBox();
             pictureBox11 = new PictureBox();
             pictureBox10 = new PictureBox();
             pictureBox12 = new PictureBox();
-            textBox24 = new TextBox();
-            textBox25 = new TextBox();
-            textBox26 = new TextBox();
-            textBox27 = new TextBox();
-            textBox28 = new TextBox();
-            textBox29 = new TextBox();
+            nameboxAdmins = new TextBox();
+            emailboxAdmins = new TextBox();
+            lastnboxAdmins = new TextBox();
+            s_clavebox = new TextBox();
             textBox30 = new TextBox();
-            textBox31 = new TextBox();
+            s_userbox = new TextBox();
             textBox32 = new TextBox();
-            dataGridView4 = new DataGridView();
+            dataadmins = new DataGridView();
             textBox33 = new TextBox();
-            textBox34 = new TextBox();
+            idboxAdmins = new TextBox();
             textBox35 = new TextBox();
             textBox36 = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            button2 = new Button();
+            panel3 = new Panel();
+            ((System.ComponentModel.ISupportInitialize)datauser).BeginInit();
             usuariosview.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panel7.SuspendLayout();
+            viewadmin.SuspendLayout();
             panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataadmins).BeginInit();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // userbox
@@ -96,7 +99,7 @@
             userbox.BackColor = Color.White;
             userbox.Font = new Font("Sitka Heading", 13F, FontStyle.Regular, GraphicsUnit.Point);
             userbox.ForeColor = Color.Black;
-            userbox.Location = new Point(102, 129);
+            userbox.Location = new Point(100, 155);
             userbox.Margin = new Padding(0);
             userbox.Multiline = true;
             userbox.Name = "userbox";
@@ -110,7 +113,7 @@
             clavebox.BackColor = Color.White;
             clavebox.Font = new Font("Sitka Heading", 13F, FontStyle.Regular, GraphicsUnit.Point);
             clavebox.ForeColor = Color.Black;
-            clavebox.Location = new Point(419, 129);
+            clavebox.Location = new Point(417, 155);
             clavebox.Margin = new Padding(0);
             clavebox.Multiline = true;
             clavebox.Name = "clavebox";
@@ -125,7 +128,7 @@
             lastnamebox.BackColor = Color.White;
             lastnamebox.Font = new Font("Sitka Heading", 13F, FontStyle.Regular, GraphicsUnit.Point);
             lastnamebox.ForeColor = Color.Black;
-            lastnamebox.Location = new Point(419, 55);
+            lastnamebox.Location = new Point(417, 81);
             lastnamebox.Margin = new Padding(0);
             lastnamebox.Multiline = true;
             lastnamebox.Name = "lastnamebox";
@@ -138,7 +141,7 @@
             emailbox.BackColor = Color.White;
             emailbox.Font = new Font("Sitka Heading", 13F, FontStyle.Regular, GraphicsUnit.Point);
             emailbox.ForeColor = Color.Black;
-            emailbox.Location = new Point(648, 55);
+            emailbox.Location = new Point(646, 81);
             emailbox.Margin = new Padding(0);
             emailbox.Multiline = true;
             emailbox.Name = "emailbox";
@@ -152,7 +155,7 @@
             namebox.BackColor = Color.White;
             namebox.Font = new Font("Sitka Heading", 13F, FontStyle.Regular, GraphicsUnit.Point);
             namebox.ForeColor = Color.Black;
-            namebox.Location = new Point(193, 55);
+            namebox.Location = new Point(191, 81);
             namebox.Margin = new Padding(0);
             namebox.Multiline = true;
             namebox.Name = "namebox";
@@ -171,32 +174,34 @@
             label1.TabIndex = 27;
             label1.Text = "Administradores";
             // 
-            // dataGridView2
+            // datauser
             // 
             dataGridViewCellStyle1.BackColor = Color.Gainsboro;
             dataGridViewCellStyle1.Font = new Font("Microsoft Tai Le", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = Color.Honeydew;
             dataGridViewCellStyle1.SelectionForeColor = Color.White;
-            dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView2.BackgroundColor = SystemColors.ControlDarkDark;
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.GridColor = Color.FromArgb(128, 128, 255);
-            dataGridView2.Location = new Point(102, 169);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.ReadOnly = true;
-            dataGridView2.RowTemplate.Height = 25;
-            dataGridView2.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView2.Size = new Size(872, 230);
-            dataGridView2.TabIndex = 33;
-            dataGridView2.CellClick += dataGridView2_CellClick;
+            datauser.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            datauser.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            datauser.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            datauser.BackgroundColor = SystemColors.ControlDarkDark;
+            datauser.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            datauser.GridColor = Color.FromArgb(128, 128, 255);
+            datauser.Location = new Point(100, 209);
+            datauser.Name = "datauser";
+            datauser.ReadOnly = true;
+            datauser.RowTemplate.Height = 25;
+            datauser.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            datauser.Size = new Size(872, 216);
+            datauser.TabIndex = 33;
+            datauser.CellClick += dataGridView2_CellClick;
             // 
             // idbox
             // 
             idbox.BackColor = Color.White;
             idbox.Font = new Font("Sitka Heading", 13F, FontStyle.Regular, GraphicsUnit.Point);
             idbox.ForeColor = Color.Black;
-            idbox.Location = new Point(102, 55);
+            idbox.Location = new Point(100, 81);
             idbox.Margin = new Padding(0);
             idbox.Multiline = true;
             idbox.Name = "idbox";
@@ -209,7 +214,7 @@
             textBox1.BackColor = Color.White;
             textBox1.Font = new Font("Sitka Heading", 13F, FontStyle.Regular, GraphicsUnit.Point);
             textBox1.ForeColor = Color.Black;
-            textBox1.Location = new Point(191, 18);
+            textBox1.Location = new Point(189, 44);
             textBox1.Margin = new Padding(0);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
@@ -224,7 +229,7 @@
             textBox2.BackColor = Color.White;
             textBox2.Font = new Font("Sitka Heading", 13F, FontStyle.Regular, GraphicsUnit.Point);
             textBox2.ForeColor = Color.Black;
-            textBox2.Location = new Point(419, 18);
+            textBox2.Location = new Point(417, 44);
             textBox2.Margin = new Padding(0);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
@@ -239,7 +244,7 @@
             textBox3.BackColor = Color.White;
             textBox3.Font = new Font("Sitka Heading", 13F, FontStyle.Regular, GraphicsUnit.Point);
             textBox3.ForeColor = Color.Black;
-            textBox3.Location = new Point(648, 18);
+            textBox3.Location = new Point(646, 44);
             textBox3.Margin = new Padding(0);
             textBox3.Multiline = true;
             textBox3.Name = "textBox3";
@@ -254,7 +259,7 @@
             textBox4.BackColor = Color.White;
             textBox4.Font = new Font("Sitka Heading", 13F, FontStyle.Regular, GraphicsUnit.Point);
             textBox4.ForeColor = Color.Black;
-            textBox4.Location = new Point(102, 92);
+            textBox4.Location = new Point(100, 118);
             textBox4.Margin = new Padding(0);
             textBox4.Multiline = true;
             textBox4.Name = "textBox4";
@@ -269,7 +274,7 @@
             textBox5.BackColor = Color.White;
             textBox5.Font = new Font("Sitka Heading", 13F, FontStyle.Regular, GraphicsUnit.Point);
             textBox5.ForeColor = Color.Black;
-            textBox5.Location = new Point(419, 92);
+            textBox5.Location = new Point(417, 118);
             textBox5.Margin = new Padding(0);
             textBox5.Multiline = true;
             textBox5.Name = "textBox5";
@@ -284,7 +289,7 @@
             textBox6.BackColor = Color.White;
             textBox6.Font = new Font("Sitka Heading", 13F, FontStyle.Regular, GraphicsUnit.Point);
             textBox6.ForeColor = Color.Black;
-            textBox6.Location = new Point(102, 18);
+            textBox6.Location = new Point(100, 44);
             textBox6.Margin = new Padding(0);
             textBox6.Multiline = true;
             textBox6.Name = "textBox6";
@@ -299,7 +304,7 @@
             textBox7.BackColor = Color.White;
             textBox7.Font = new Font("Sitka Heading", 13F, FontStyle.Regular, GraphicsUnit.Point);
             textBox7.ForeColor = Color.Black;
-            textBox7.Location = new Point(648, 92);
+            textBox7.Location = new Point(646, 118);
             textBox7.Margin = new Padding(0);
             textBox7.Multiline = true;
             textBox7.Name = "textBox7";
@@ -314,7 +319,7 @@
             textBox8.BackColor = Color.White;
             textBox8.Font = new Font("Sitka Heading", 13F, FontStyle.Regular, GraphicsUnit.Point);
             textBox8.ForeColor = Color.Black;
-            textBox8.Location = new Point(648, 129);
+            textBox8.Location = new Point(646, 155);
             textBox8.Margin = new Padding(0);
             textBox8.Multiline = true;
             textBox8.Name = "textBox8";
@@ -325,17 +330,21 @@
             // 
             // button4
             // 
-            button4.Location = new Point(21, 43);
+            button4.BackColor = Color.FromArgb(48, 48, 48);
+            button4.Font = new Font("Berlin Sans FB", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.ForeColor = Color.White;
+            button4.Location = new Point(12, 129);
             button4.Name = "button4";
-            button4.Size = new Size(214, 40);
+            button4.Size = new Size(193, 54);
             button4.TabIndex = 45;
-            button4.Text = "Datos Usuarios";
-            button4.UseVisualStyleBackColor = true;
+            button4.Text = "Usuarios";
+            button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 
             // usuariosview
             // 
             usuariosview.BackColor = Color.White;
+            usuariosview.Controls.Add(label3);
             usuariosview.Controls.Add(panel2);
             usuariosview.Controls.Add(textBox6);
             usuariosview.Controls.Add(namebox);
@@ -347,16 +356,27 @@
             usuariosview.Controls.Add(textBox5);
             usuariosview.Controls.Add(userbox);
             usuariosview.Controls.Add(textBox4);
-            usuariosview.Controls.Add(dataGridView2);
+            usuariosview.Controls.Add(datauser);
             usuariosview.Controls.Add(textBox3);
             usuariosview.Controls.Add(idbox);
             usuariosview.Controls.Add(textBox2);
             usuariosview.Controls.Add(textBox1);
-            usuariosview.Location = new Point(257, 77);
+            usuariosview.Location = new Point(262, 102);
             usuariosview.Name = "usuariosview";
-            usuariosview.Size = new Size(990, 421);
+            usuariosview.Size = new Size(989, 451);
             usuariosview.TabIndex = 46;
             usuariosview.Visible = false;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Palatino Linotype", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.Black;
+            label3.Location = new Point(388, 9);
+            label3.Name = "label3";
+            label3.Size = new Size(174, 26);
+            label3.TabIndex = 50;
+            label3.Text = "Datos de Usuarios";
             // 
             // panel2
             // 
@@ -365,9 +385,10 @@
             panel2.Controls.Add(pictureBox3);
             panel2.Controls.Add(pictureBox2);
             panel2.Controls.Add(pictureBox1);
+            panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(86, 421);
+            panel2.Size = new Size(83, 451);
             panel2.TabIndex = 45;
             // 
             // pictureBox4
@@ -417,36 +438,47 @@
             pictureBox1.TabStop = false;
             pictureBox1.Click += verdatosactualizados_Click;
             // 
-            // panel7
+            // viewadmin
             // 
-            panel7.BackColor = Color.White;
-            panel7.Controls.Add(textBox23);
-            panel7.Controls.Add(panel8);
-            panel7.Controls.Add(textBox24);
-            panel7.Controls.Add(textBox25);
-            panel7.Controls.Add(textBox26);
-            panel7.Controls.Add(textBox27);
-            panel7.Controls.Add(textBox28);
-            panel7.Controls.Add(textBox29);
-            panel7.Controls.Add(textBox30);
-            panel7.Controls.Add(textBox31);
-            panel7.Controls.Add(textBox32);
-            panel7.Controls.Add(dataGridView4);
-            panel7.Controls.Add(textBox33);
-            panel7.Controls.Add(textBox34);
-            panel7.Controls.Add(textBox35);
-            panel7.Controls.Add(textBox36);
-            panel7.Location = new Point(273, 504);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(990, 421);
-            panel7.TabIndex = 47;
+            viewadmin.BackColor = Color.White;
+            viewadmin.Controls.Add(label2);
+            viewadmin.Controls.Add(textBox23);
+            viewadmin.Controls.Add(panel8);
+            viewadmin.Controls.Add(nameboxAdmins);
+            viewadmin.Controls.Add(emailboxAdmins);
+            viewadmin.Controls.Add(lastnboxAdmins);
+            viewadmin.Controls.Add(s_clavebox);
+            viewadmin.Controls.Add(textBox30);
+            viewadmin.Controls.Add(s_userbox);
+            viewadmin.Controls.Add(textBox32);
+            viewadmin.Controls.Add(dataadmins);
+            viewadmin.Controls.Add(textBox33);
+            viewadmin.Controls.Add(idboxAdmins);
+            viewadmin.Controls.Add(textBox35);
+            viewadmin.Controls.Add(textBox36);
+            viewadmin.Location = new Point(259, 102);
+            viewadmin.Name = "viewadmin";
+            viewadmin.Size = new Size(989, 451);
+            viewadmin.TabIndex = 47;
+            viewadmin.Visible = false;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Palatino Linotype", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.Black;
+            label2.Location = new Point(382, 5);
+            label2.Name = "label2";
+            label2.Size = new Size(246, 26);
+            label2.TabIndex = 49;
+            label2.Text = "Datos de Administradores";
             // 
             // textBox23
             // 
             textBox23.BackColor = Color.White;
             textBox23.Font = new Font("Sitka Heading", 13F, FontStyle.Regular, GraphicsUnit.Point);
             textBox23.ForeColor = Color.Black;
-            textBox23.Location = new Point(102, 18);
+            textBox23.Location = new Point(100, 46);
             textBox23.Margin = new Padding(0);
             textBox23.Multiline = true;
             textBox23.Name = "textBox23";
@@ -465,7 +497,7 @@
             panel8.Controls.Add(pictureBox12);
             panel8.Location = new Point(0, 0);
             panel8.Name = "panel8";
-            panel8.Size = new Size(83, 421);
+            panel8.Size = new Size(83, 451);
             panel8.TabIndex = 45;
             // 
             // pictureBox9
@@ -489,7 +521,7 @@
             pictureBox11.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox11.TabIndex = 48;
             pictureBox11.TabStop = false;
-            pictureBox11.Click += actualizar_Click;
+            pictureBox11.Click += actualizar_Clickadmin;
             // 
             // pictureBox10
             // 
@@ -501,7 +533,7 @@
             pictureBox10.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox10.TabIndex = 49;
             pictureBox10.TabStop = false;
-            pictureBox10.Click += verdatosactualizados_Click;
+            pictureBox10.Click += verdatosactualizadosadmin_Click;
             // 
             // pictureBox12
             // 
@@ -513,97 +545,68 @@
             pictureBox12.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox12.TabIndex = 47;
             pictureBox12.TabStop = false;
-            pictureBox12.Click += verdatosactualizados_Click;
+            pictureBox12.Click += verdatosactualizadosadmin_Click;
             // 
-            // textBox24
+            // nameboxAdmins
             // 
-            textBox24.BackColor = Color.White;
-            textBox24.Font = new Font("Sitka Heading", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox24.ForeColor = Color.Black;
-            textBox24.Location = new Point(193, 55);
-            textBox24.Margin = new Padding(0);
-            textBox24.Multiline = true;
-            textBox24.Name = "textBox24";
-            textBox24.Size = new Size(226, 37);
-            textBox24.TabIndex = 28;
-            textBox24.TextAlign = HorizontalAlignment.Center;
+            nameboxAdmins.BackColor = Color.White;
+            nameboxAdmins.Font = new Font("Sitka Heading", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            nameboxAdmins.ForeColor = Color.Black;
+            nameboxAdmins.Location = new Point(191, 83);
+            nameboxAdmins.Margin = new Padding(0);
+            nameboxAdmins.Multiline = true;
+            nameboxAdmins.Name = "nameboxAdmins";
+            nameboxAdmins.Size = new Size(226, 37);
+            nameboxAdmins.TabIndex = 28;
+            nameboxAdmins.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox25
+            // emailboxAdmins
             // 
-            textBox25.BackColor = Color.White;
-            textBox25.Font = new Font("Sitka Heading", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox25.ForeColor = Color.Black;
-            textBox25.Location = new Point(648, 129);
-            textBox25.Margin = new Padding(0);
-            textBox25.Multiline = true;
-            textBox25.Name = "textBox25";
-            textBox25.Size = new Size(326, 37);
-            textBox25.TabIndex = 44;
-            textBox25.Tag = "";
-            textBox25.TextAlign = HorizontalAlignment.Center;
+            emailboxAdmins.BackColor = Color.White;
+            emailboxAdmins.Font = new Font("Sitka Heading", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            emailboxAdmins.ForeColor = Color.Black;
+            emailboxAdmins.Location = new Point(646, 83);
+            emailboxAdmins.Margin = new Padding(0);
+            emailboxAdmins.Multiline = true;
+            emailboxAdmins.Name = "emailboxAdmins";
+            emailboxAdmins.Size = new Size(326, 37);
+            emailboxAdmins.TabIndex = 29;
+            emailboxAdmins.Tag = "";
+            emailboxAdmins.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox26
+            // lastnboxAdmins
             // 
-            textBox26.BackColor = Color.White;
-            textBox26.Font = new Font("Sitka Heading", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox26.ForeColor = Color.Black;
-            textBox26.Location = new Point(648, 55);
-            textBox26.Margin = new Padding(0);
-            textBox26.Multiline = true;
-            textBox26.Name = "textBox26";
-            textBox26.Size = new Size(326, 37);
-            textBox26.TabIndex = 29;
-            textBox26.Tag = "";
-            textBox26.TextAlign = HorizontalAlignment.Center;
+            lastnboxAdmins.BackColor = Color.White;
+            lastnboxAdmins.Font = new Font("Sitka Heading", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            lastnboxAdmins.ForeColor = Color.Black;
+            lastnboxAdmins.Location = new Point(417, 83);
+            lastnboxAdmins.Margin = new Padding(0);
+            lastnboxAdmins.Multiline = true;
+            lastnboxAdmins.Name = "lastnboxAdmins";
+            lastnboxAdmins.Size = new Size(229, 37);
+            lastnboxAdmins.TabIndex = 30;
+            lastnboxAdmins.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox27
+            // s_clavebox
             // 
-            textBox27.BackColor = Color.White;
-            textBox27.Font = new Font("Sitka Heading", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox27.ForeColor = Color.Black;
-            textBox27.Location = new Point(648, 92);
-            textBox27.Margin = new Padding(0);
-            textBox27.Multiline = true;
-            textBox27.Name = "textBox27";
-            textBox27.ReadOnly = true;
-            textBox27.Size = new Size(326, 37);
-            textBox27.TabIndex = 43;
-            textBox27.Text = "Fecha de nacimiento";
-            textBox27.TextAlign = HorizontalAlignment.Center;
-            // 
-            // textBox28
-            // 
-            textBox28.BackColor = Color.White;
-            textBox28.Font = new Font("Sitka Heading", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox28.ForeColor = Color.Black;
-            textBox28.Location = new Point(419, 55);
-            textBox28.Margin = new Padding(0);
-            textBox28.Multiline = true;
-            textBox28.Name = "textBox28";
-            textBox28.Size = new Size(229, 37);
-            textBox28.TabIndex = 30;
-            textBox28.TextAlign = HorizontalAlignment.Center;
-            // 
-            // textBox29
-            // 
-            textBox29.BackColor = Color.White;
-            textBox29.Font = new Font("Sitka Heading", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox29.ForeColor = Color.Black;
-            textBox29.Location = new Point(419, 129);
-            textBox29.Margin = new Padding(0);
-            textBox29.Multiline = true;
-            textBox29.Name = "textBox29";
-            textBox29.Size = new Size(229, 37);
-            textBox29.TabIndex = 31;
-            textBox29.Tag = "";
-            textBox29.TextAlign = HorizontalAlignment.Center;
+            s_clavebox.BackColor = Color.White;
+            s_clavebox.Font = new Font("Sitka Heading", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            s_clavebox.ForeColor = Color.Black;
+            s_clavebox.Location = new Point(417, 157);
+            s_clavebox.Margin = new Padding(0);
+            s_clavebox.Multiline = true;
+            s_clavebox.Name = "s_clavebox";
+            s_clavebox.Size = new Size(229, 37);
+            s_clavebox.TabIndex = 31;
+            s_clavebox.Tag = "";
+            s_clavebox.TextAlign = HorizontalAlignment.Center;
             // 
             // textBox30
             // 
             textBox30.BackColor = Color.White;
             textBox30.Font = new Font("Sitka Heading", 13F, FontStyle.Regular, GraphicsUnit.Point);
             textBox30.ForeColor = Color.Black;
-            textBox30.Location = new Point(419, 92);
+            textBox30.Location = new Point(417, 120);
             textBox30.Margin = new Padding(0);
             textBox30.Multiline = true;
             textBox30.Name = "textBox30";
@@ -613,60 +616,63 @@
             textBox30.Text = "Clave";
             textBox30.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox31
+            // s_userbox
             // 
-            textBox31.BackColor = Color.White;
-            textBox31.Font = new Font("Sitka Heading", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox31.ForeColor = Color.Black;
-            textBox31.Location = new Point(102, 129);
-            textBox31.Margin = new Padding(0);
-            textBox31.Multiline = true;
-            textBox31.Name = "textBox31";
-            textBox31.Size = new Size(317, 37);
-            textBox31.TabIndex = 32;
-            textBox31.Tag = "";
-            textBox31.TextAlign = HorizontalAlignment.Center;
+            s_userbox.BackColor = Color.White;
+            s_userbox.Font = new Font("Sitka Heading", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            s_userbox.ForeColor = Color.Black;
+            s_userbox.Location = new Point(100, 157);
+            s_userbox.Margin = new Padding(0);
+            s_userbox.Multiline = true;
+            s_userbox.Name = "s_userbox";
+            s_userbox.Size = new Size(317, 37);
+            s_userbox.TabIndex = 32;
+            s_userbox.Tag = "";
+            s_userbox.TextAlign = HorizontalAlignment.Center;
             // 
             // textBox32
             // 
             textBox32.BackColor = Color.White;
             textBox32.Font = new Font("Sitka Heading", 13F, FontStyle.Regular, GraphicsUnit.Point);
             textBox32.ForeColor = Color.Black;
-            textBox32.Location = new Point(102, 92);
+            textBox32.Location = new Point(100, 120);
             textBox32.Margin = new Padding(0);
             textBox32.Multiline = true;
             textBox32.Name = "textBox32";
             textBox32.ReadOnly = true;
             textBox32.Size = new Size(317, 37);
             textBox32.TabIndex = 40;
-            textBox32.Text = "Usuario";
+            textBox32.Text = "Super Usuario";
             textBox32.TextAlign = HorizontalAlignment.Center;
             // 
-            // dataGridView4
+            // dataadmins
             // 
             dataGridViewCellStyle2.BackColor = Color.Gainsboro;
             dataGridViewCellStyle2.Font = new Font("Microsoft Tai Le", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = Color.Honeydew;
             dataGridViewCellStyle2.SelectionForeColor = Color.White;
-            dataGridView4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridView4.BackgroundColor = SystemColors.ControlDarkDark;
-            dataGridView4.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView4.GridColor = Color.FromArgb(128, 128, 255);
-            dataGridView4.Location = new Point(102, 169);
-            dataGridView4.Name = "dataGridView4";
-            dataGridView4.ReadOnly = true;
-            dataGridView4.RowTemplate.Height = 25;
-            dataGridView4.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView4.Size = new Size(872, 230);
-            dataGridView4.TabIndex = 33;
+            dataadmins.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataadmins.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataadmins.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataadmins.BackgroundColor = SystemColors.ControlDarkDark;
+            dataadmins.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataadmins.GridColor = Color.FromArgb(128, 128, 255);
+            dataadmins.Location = new Point(100, 207);
+            dataadmins.Name = "dataadmins";
+            dataadmins.ReadOnly = true;
+            dataadmins.RowTemplate.Height = 25;
+            dataadmins.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataadmins.Size = new Size(872, 230);
+            dataadmins.TabIndex = 33;
+            dataadmins.CellClick += dataGridView1_CellClick;
             // 
             // textBox33
             // 
             textBox33.BackColor = Color.White;
             textBox33.Font = new Font("Sitka Heading", 13F, FontStyle.Regular, GraphicsUnit.Point);
             textBox33.ForeColor = Color.Black;
-            textBox33.Location = new Point(648, 18);
+            textBox33.Location = new Point(646, 46);
             textBox33.Margin = new Padding(0);
             textBox33.Multiline = true;
             textBox33.Name = "textBox33";
@@ -676,25 +682,25 @@
             textBox33.Text = "Correo";
             textBox33.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox34
+            // idboxAdmins
             // 
-            textBox34.BackColor = Color.White;
-            textBox34.Font = new Font("Sitka Heading", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox34.ForeColor = Color.Black;
-            textBox34.Location = new Point(102, 55);
-            textBox34.Margin = new Padding(0);
-            textBox34.Multiline = true;
-            textBox34.Name = "textBox34";
-            textBox34.Size = new Size(91, 37);
-            textBox34.TabIndex = 35;
-            textBox34.TextAlign = HorizontalAlignment.Center;
+            idboxAdmins.BackColor = Color.White;
+            idboxAdmins.Font = new Font("Sitka Heading", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            idboxAdmins.ForeColor = Color.Black;
+            idboxAdmins.Location = new Point(100, 83);
+            idboxAdmins.Margin = new Padding(0);
+            idboxAdmins.Multiline = true;
+            idboxAdmins.Name = "idboxAdmins";
+            idboxAdmins.Size = new Size(91, 37);
+            idboxAdmins.TabIndex = 35;
+            idboxAdmins.TextAlign = HorizontalAlignment.Center;
             // 
             // textBox35
             // 
             textBox35.BackColor = Color.White;
             textBox35.Font = new Font("Sitka Heading", 13F, FontStyle.Regular, GraphicsUnit.Point);
             textBox35.ForeColor = Color.Black;
-            textBox35.Location = new Point(419, 18);
+            textBox35.Location = new Point(417, 46);
             textBox35.Margin = new Padding(0);
             textBox35.Multiline = true;
             textBox35.Name = "textBox35";
@@ -709,7 +715,7 @@
             textBox36.BackColor = Color.White;
             textBox36.Font = new Font("Sitka Heading", 13F, FontStyle.Regular, GraphicsUnit.Point);
             textBox36.ForeColor = Color.Black;
-            textBox36.Location = new Point(191, 18);
+            textBox36.Location = new Point(189, 46);
             textBox36.Margin = new Padding(0);
             textBox36.Multiline = true;
             textBox36.Name = "textBox36";
@@ -719,22 +725,47 @@
             textBox36.Text = "Nombre";
             textBox36.TextAlign = HorizontalAlignment.Center;
             // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(48, 48, 48);
+            button2.Font = new Font("Berlin Sans FB", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(12, 72);
+            button2.Name = "button2";
+            button2.Size = new Size(193, 51);
+            button2.TabIndex = 48;
+            button2.Text = "Administradores";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += adminsvisible_Click;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.FromArgb(33, 33, 33);
+            panel3.Controls.Add(button4);
+            panel3.Controls.Add(button2);
+            panel3.Dock = DockStyle.Left;
+            panel3.Location = new Point(0, 0);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(226, 540);
+            panel3.TabIndex = 51;
+            panel3.Paint += panel3_Paint;
+            // 
             // Administradores
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(48, 48, 48);
             ClientSize = new Size(1275, 540);
-            Controls.Add(panel7);
+            Controls.Add(panel3);
+            Controls.Add(viewadmin);
             Controls.Add(usuariosview);
-            Controls.Add(button4);
             Controls.Add(label1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Administradores";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Administradores";
             Load += Administradores_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)datauser).EndInit();
             usuariosview.ResumeLayout(false);
             usuariosview.PerformLayout();
             panel2.ResumeLayout(false);
@@ -742,14 +773,15 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panel7.ResumeLayout(false);
-            panel7.PerformLayout();
+            viewadmin.ResumeLayout(false);
+            viewadmin.PerformLayout();
             panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataadmins).EndInit();
+            panel3.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -772,7 +804,7 @@
         private TextBox emailbox;
         private TextBox namebox;
         private Label label1;
-        private DataGridView dataGridView2;
+        private DataGridView datauser;
         private TextBox idbox;
         private TextBox textBox1;
         private TextBox textBox2;
@@ -789,26 +821,28 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;
-        private Panel panel7;
+        private Panel viewadmin;
         private Panel panel8;
         private PictureBox pictureBox9;
         private PictureBox pictureBox10;
         private PictureBox pictureBox11;
         private PictureBox pictureBox12;
         private TextBox textBox23;
-        private TextBox textBox24;
-        private TextBox textBox25;
-        private TextBox textBox26;
-        private TextBox textBox27;
-        private TextBox textBox28;
-        private TextBox textBox29;
+        private TextBox nameboxAdmins;
+        private TextBox emailboxAdmins;
+        private TextBox lastnboxAdmins;
+        private TextBox s_clavebox;
         private TextBox textBox30;
-        private TextBox textBox31;
+        private TextBox s_userbox;
         private TextBox textBox32;
-        private DataGridView dataGridView4;
+        private DataGridView dataadmins;
         private TextBox textBox33;
-        private TextBox textBox34;
+        private TextBox idboxAdmins;
         private TextBox textBox35;
         private TextBox textBox36;
+        private Button button2;
+        private Label label3;
+        private Label label2;
+        private Panel panel3;
     }
 }

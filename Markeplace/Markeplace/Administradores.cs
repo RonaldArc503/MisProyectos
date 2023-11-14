@@ -27,19 +27,6 @@ namespace Markeplace
             frm.Close();
         }
 
-        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            idbox.Text = dataGridView2.SelectedCells[0].Value.ToString();
-            namebox.Text = dataGridView2.SelectedCells[1].Value.ToString();
-            lastnamebox.Text = dataGridView2.SelectedCells[2].Value.ToString();
-            emailbox.Text = dataGridView2.SelectedCells[3].Value.ToString();
-            userbox.Text = dataGridView2.SelectedCells[4].Value.ToString();
-            clavebox.Text = dataGridView2.SelectedCells[5].Value.ToString();
-            //  datebbox.Text = dataGridView2.SelectedCells[6].Value.ToString();
-
-
-        }
-
         private void llenar_tabla()
         {
 
@@ -47,7 +34,18 @@ namespace Markeplace
             SqlDataAdapter adaptador = new SqlDataAdapter(consulta, conexion);
             DataTable dt = new DataTable();
             adaptador.Fill(dt);
-            dataGridView2.DataSource = dt;
+            datauser.DataSource = dt;
+
+        }
+
+        private void llenar_tablaadmin()
+        {
+
+            string consulta2 = "select*from Administradores";
+            SqlDataAdapter adaptador = new SqlDataAdapter(consulta2, conexion);
+            DataTable dt1 = new DataTable();
+            adaptador.Fill(dt1);
+            dataadmins.DataSource = dt1;
 
         }
 
@@ -80,11 +78,62 @@ namespace Markeplace
         }
 
 
+        private void actualizar_Clickadmin(object sender, EventArgs e)
+        {
+
+            conexion.Open();
+            string consulta = "UPDATE Administradores SET Nombre = @Nombre, Apellido = @Apellido, Correo = @Correo, Super_Usuario = @Usuario, Clave = @Clave WHERE id = @ID";
+            SqlCommand comando = new SqlCommand(consulta, conexion);
+            comando.Parameters.AddWithValue("@ID", idboxAdmins.Text);
+            comando.Parameters.AddWithValue("@Nombre", nameboxAdmins.Text);
+            comando.Parameters.AddWithValue("@Apellido", lastnboxAdmins.Text);
+            comando.Parameters.AddWithValue("@Correo", emailboxAdmins.Text);
+            comando.Parameters.AddWithValue("@Usuario", s_userbox.Text);
+            comando.Parameters.AddWithValue("@Clave", s_clavebox.Text);
+
+            int cant;
+            cant = comando.ExecuteNonQuery();
+
+            if (cant > 0)
+            {
+                MessageBox.Show("Datos actualizados");
+            }
+
+            conexion.Close();
 
 
 
 
+        }
 
+
+
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            idboxAdmins.Text = dataadmins.SelectedCells[0].Value.ToString();
+            nameboxAdmins.Text = dataadmins.SelectedCells[1].Value.ToString();
+            lastnboxAdmins.Text = dataadmins.SelectedCells[2].Value.ToString();
+            emailboxAdmins.Text = dataadmins.SelectedCells[3].Value.ToString();
+            s_userbox.Text = dataadmins.SelectedCells[4].Value.ToString();
+            s_clavebox.Text = dataadmins.SelectedCells[5].Value.ToString();
+            //  datebbox.Text = dataGridView2.SelectedCells[6].Value.ToString();
+
+
+        }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            idbox.Text = datauser.SelectedCells[0].Value.ToString();
+            namebox.Text = datauser.SelectedCells[1].Value.ToString();
+            lastnamebox.Text = datauser.SelectedCells[2].Value.ToString();
+            emailbox.Text = datauser.SelectedCells[3].Value.ToString();
+            userbox.Text = datauser.SelectedCells[4].Value.ToString();
+            clavebox.Text = datauser.SelectedCells[5].Value.ToString();
+            //  datebbox.Text = dataGridView2.SelectedCells[6].Value.ToString();
+
+
+        }
 
 
 
@@ -200,9 +249,26 @@ namespace Markeplace
         private void button4_Click(object sender, EventArgs e)
         {
             usuariosview.Visible = !usuariosview.Visible;
+            viewadmin.Visible = false;
+        }
+
+        private void adminsvisible_Click(object sender, EventArgs e)
+        {
+            viewadmin.Visible = !viewadmin.Visible;
+            usuariosview.Visible = false;
         }
 
         private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void verdatosactualizadosadmin_Click(object sender, EventArgs e)
+        {
+            llenar_tablaadmin();
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
         }
