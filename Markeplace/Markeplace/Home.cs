@@ -30,7 +30,7 @@ namespace Markeplace
 
         private void panel3_Click(object sender, EventArgs e)
         {
-            Form1 Fm = new Form1();
+            logeo Fm = new logeo();
 
             Hide();
             Fm.ShowDialog();

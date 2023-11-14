@@ -807,13 +807,7 @@
         private System.CodeDom.CodeTypeReference button1;
         private System.CodeDom.CodeTypeReference panel1;
         private System.CodeDom.CodeTypeReference dataGridView1;
-        private System.CodeDom.CodeTypeReference id;
-        private System.CodeDom.CodeTypeReference nametable;
-        private System.CodeDom.CodeTypeReference lastntable;
-        private System.CodeDom.CodeTypeReference correotable;
-        private System.CodeDom.CodeTypeReference usertable;
-        private System.CodeDom.CodeTypeReference calvetable;
-        private System.CodeDom.CodeTypeReference borntable;
+    
         private TextBox userbox;
         private TextBox clavebox;
         private TextBox lastnamebox;

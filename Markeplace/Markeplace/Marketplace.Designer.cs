@@ -278,7 +278,7 @@
             // 
             salirapp.AutoSize = true;
             salirapp.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            salirapp.Location = new Point(933, 36);
+            salirapp.Location = new Point(929, 41);
             salirapp.Name = "salirapp";
             salirapp.Size = new Size(42, 21);
             salirapp.TabIndex = 6;
@@ -520,7 +520,7 @@
             // itemshop9
             // 
             itemshop9.BackColor = Color.White;
-            itemshop9.Location = new Point(36, 23);
+            itemshop9.Location = new Point(40, 23);
             itemshop9.Name = "itemshop9";
             itemshop9.Size = new Size(305, 283);
             itemshop9.TabIndex = 9;

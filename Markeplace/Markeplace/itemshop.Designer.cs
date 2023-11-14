@@ -49,7 +49,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(28, 29);
+            pictureBox1.Location = new Point(33, 28);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(213, 196);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -84,9 +84,8 @@
         }
 
         #endregion
-
-        private Label label1;
-        private PictureBox pictureBox1;
         private PictureBox pictureBox2;
+        public Label label1;
+        public PictureBox pictureBox1;
     }
 }

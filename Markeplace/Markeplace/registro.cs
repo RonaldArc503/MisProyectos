@@ -83,7 +83,7 @@ namespace Markeplace
                         MessageBox.Show("Usted se ha Registrado, Gracias.");
 
 
-                        Form1 Fm = new Form1();
+                        logeo Fm = new logeo();
 
                         this.Hide();
                         Fm.ShowDialog();
@@ -92,7 +92,7 @@ namespace Markeplace
                 }
             }
 
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Lo siento, ya se Registro o vuela a intentarlo mas tarde");
             }
@@ -104,7 +104,7 @@ namespace Markeplace
 
         private void LoginYatengocuenta(object sender, EventArgs e)
         {
-            Form1 Fm = new Form1();
+            logeo Fm = new logeo();
 
             this.Hide();
             Fm.ShowDialog();

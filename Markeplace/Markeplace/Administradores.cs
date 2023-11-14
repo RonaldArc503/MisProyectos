@@ -23,7 +23,7 @@ namespace Markeplace
 
         private void Administradores_Load(object sender, EventArgs e)
         {
-            Form1 frm = new Form1();
+            logeo frm = new logeo();
             frm.Close();
         }
 
@@ -98,6 +98,8 @@ namespace Markeplace
             {
                 MessageBox.Show("Datos actualizados");
             }
+
+            llenar_tablaadmin();
 
             conexion.Close();
 
@@ -222,7 +224,7 @@ namespace Markeplace
                     conexion.Open();
 
                     string name = nameboxAdmins.Text;
-                    string lastn = lastnamebox.Text;
+                    string lastn = lastnboxAdmins.Text;
                     string email = emailboxAdmins.Text;
                     string user = s_userbox.Text;
                     string clave = s_clavebox.Text;
@@ -254,7 +256,7 @@ namespace Markeplace
 
                         idboxAdmins.Clear();
                         nameboxAdmins.Clear();
-                        lastnamebox.Clear();
+                        lastnboxAdmins.Clear();
                         emailboxAdmins.Clear();
                         s_userbox.Clear();
                         s_clavebox.Clear();
@@ -264,7 +266,7 @@ namespace Markeplace
                 }
             }
 
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("  ");
             }
