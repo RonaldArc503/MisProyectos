@@ -122,5 +122,24 @@ namespace Markeplace
             }
         }
 
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+          
+            
+                if (password.PasswordChar == '*')
+                {
+                   
+                    password.PasswordChar = '\0';  
+                }
+                else
+                {
+                  
+                    password.PasswordChar = '*';
+                }
+            }
+
+
+
+        
     }
 }
