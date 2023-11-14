@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administradores));
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             userbox = new TextBox();
             clavebox = new TextBox();
             lastnamebox = new TextBox();
@@ -59,7 +59,7 @@
             label2 = new Label();
             textBox23 = new TextBox();
             panel8 = new Panel();
-            pictureBox9 = new PictureBox();
+            deleteuser = new PictureBox();
             pictureBox11 = new PictureBox();
             pictureBox10 = new PictureBox();
             pictureBox12 = new PictureBox();
@@ -86,7 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             viewadmin.SuspendLayout();
             panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)deleteuser).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
@@ -121,7 +121,6 @@
             clavebox.TabIndex = 31;
             clavebox.Tag = "";
             clavebox.TextAlign = HorizontalAlignment.Center;
-            clavebox.TextChanged += clavebox_TextChanged;
             // 
             // lastnamebox
             // 
@@ -176,12 +175,12 @@
             // 
             // datauser
             // 
-            dataGridViewCellStyle1.BackColor = Color.Gainsboro;
-            dataGridViewCellStyle1.Font = new Font("Microsoft Tai Le", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = Color.Honeydew;
-            dataGridViewCellStyle1.SelectionForeColor = Color.White;
-            datauser.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = Color.Gainsboro;
+            dataGridViewCellStyle3.Font = new Font("Microsoft Tai Le", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = Color.Honeydew;
+            dataGridViewCellStyle3.SelectionForeColor = Color.White;
+            datauser.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             datauser.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             datauser.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             datauser.BackgroundColor = SystemColors.ControlDarkDark;
@@ -401,6 +400,7 @@
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 50;
             pictureBox4.TabStop = false;
+            pictureBox4.Click += eliminar_registro_usuario;
             // 
             // pictureBox3
             // 
@@ -491,7 +491,7 @@
             // panel8
             // 
             panel8.BackColor = Color.FromArgb(33, 33, 33);
-            panel8.Controls.Add(pictureBox9);
+            panel8.Controls.Add(deleteuser);
             panel8.Controls.Add(pictureBox11);
             panel8.Controls.Add(pictureBox10);
             panel8.Controls.Add(pictureBox12);
@@ -500,16 +500,17 @@
             panel8.Size = new Size(83, 451);
             panel8.TabIndex = 45;
             // 
-            // pictureBox9
+            // deleteuser
             // 
-            pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
-            pictureBox9.Location = new Point(26, 195);
-            pictureBox9.Margin = new Padding(0);
-            pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(30, 30);
-            pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox9.TabIndex = 50;
-            pictureBox9.TabStop = false;
+            deleteuser.Image = (Image)resources.GetObject("deleteuser.Image");
+            deleteuser.Location = new Point(26, 195);
+            deleteuser.Margin = new Padding(0);
+            deleteuser.Name = "deleteuser";
+            deleteuser.Size = new Size(30, 30);
+            deleteuser.SizeMode = PictureBoxSizeMode.StretchImage;
+            deleteuser.TabIndex = 50;
+            deleteuser.TabStop = false;
+            deleteuser.Click += eliminar_registro_admins;
             // 
             // pictureBox11
             // 
@@ -647,12 +648,12 @@
             // 
             // dataadmins
             // 
-            dataGridViewCellStyle2.BackColor = Color.Gainsboro;
-            dataGridViewCellStyle2.Font = new Font("Microsoft Tai Le", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = Color.Honeydew;
-            dataGridViewCellStyle2.SelectionForeColor = Color.White;
-            dataadmins.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = Color.Gainsboro;
+            dataGridViewCellStyle4.Font = new Font("Microsoft Tai Le", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = Color.Honeydew;
+            dataGridViewCellStyle4.SelectionForeColor = Color.White;
+            dataadmins.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             dataadmins.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataadmins.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataadmins.BackgroundColor = SystemColors.ControlDarkDark;
@@ -748,7 +749,6 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(226, 540);
             panel3.TabIndex = 51;
-            panel3.Paint += panel3_Paint;
             // 
             // Administradores
             // 
@@ -776,7 +776,7 @@
             viewadmin.ResumeLayout(false);
             viewadmin.PerformLayout();
             panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
+            ((System.ComponentModel.ISupportInitialize)deleteuser).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
@@ -823,7 +823,7 @@
         private PictureBox pictureBox4;
         private Panel viewadmin;
         private Panel panel8;
-        private PictureBox pictureBox9;
+        private PictureBox deleteuser;
         private PictureBox pictureBox10;
         private PictureBox pictureBox11;
         private PictureBox pictureBox12;

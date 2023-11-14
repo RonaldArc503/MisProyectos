@@ -109,6 +109,8 @@ namespace Markeplace
 
 
 
+
+
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             idboxAdmins.Text = dataadmins.SelectedCells[0].Value.ToString();
@@ -138,113 +140,12 @@ namespace Markeplace
 
 
 
-
-
-
-
-
-        // los efectos 
-
-        private void Nombreusuario_Enter(object sender, EventArgs e)
-        {
-            if (namebox.Text == "Nombre")
-            {
-                namebox.Text = "";
-                namebox.ForeColor = Color.Black;
-            }
-
-        }
-
-        private void Nombreusuario_Leave(object sender, EventArgs e)
-        {
-            if (namebox.Text == "")
-            {
-                namebox.Text = "Nombre";
-                namebox.ForeColor = Color.Gray;
-            }
-        }
-
-        private void Apellidousuario_Enter(object sender, EventArgs e)
-        {
-            if (lastnamebox.Text == "Apellido")
-            {
-                lastnamebox.Text = "";
-                lastnamebox.ForeColor = Color.Black;
-            }
-        }
-
-        private void Apellidousuario_Leave(object sender, EventArgs e)
-        {
-            if (lastnamebox.Text == "")
-            {
-                lastnamebox.Text = "Apellido";
-                lastnamebox.ForeColor = Color.Gray;
-            }
-        }
-
-        private void Correo_Enter(object sender, EventArgs e)
-        {
-            if (emailbox.Text == "Correo electrónico")
-            {
-                emailbox.Text = "";
-                emailbox.ForeColor = Color.Black;
-            }
-        }
-
-        private void Correo_Leave(object sender, EventArgs e)
-        {
-            if (emailbox.Text == "")
-            {
-                emailbox.Text = "Correo electrónico";
-                emailbox.ForeColor = Color.Gray;
-            }
-        }
-
-        private void Contrasena_Enter(object sender, EventArgs e)
-        {
-            if (clavebox.Text == "Contraseña")
-            {
-                clavebox.Text = "";
-                clavebox.ForeColor = Color.Black;
-            }
-        }
-
-        private void Contrasena_Leave(object sender, EventArgs e)
-        {
-            if (clavebox.Text == "")
-            {
-                clavebox.Text = "Contraseña";
-                clavebox.ForeColor = Color.Gray;
-            }
-        }
-
-        private void User_Leave(object sender, EventArgs e)
-        {
-            if (userbox.Text == " ")
-            {
-                userbox.Text = "Usuario";
-                userbox.ForeColor = Color.Gray;
-            }
-        }
-
-        private void user_Enter(object sender, EventArgs e)
-        {
-            if (userbox.Text == "Usuario")
-            {
-                userbox.Text = " ";
-                userbox.ForeColor = Color.Black;
-            }
-        }
-
         private void verdatosactualizados_Click(object sender, EventArgs e)
         {
             llenar_tabla();
         }
 
-        private void clavebox_TextChanged(object sender, EventArgs e)
-        {
 
-        }
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -258,19 +159,35 @@ namespace Markeplace
             usuariosview.Visible = false;
         }
 
-        private void panel8_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void verdatosactualizadosadmin_Click(object sender, EventArgs e)
         {
             llenar_tablaadmin();
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
 
+
+        private void eliminar_registro_admins(object sender, EventArgs e)
+        {
+            conexion.Open();
+            string consulta = "delete from Administradores where ID = " + idboxAdmins.Text + "";
+            SqlCommand comando = new SqlCommand(consulta, conexion);
+            comando.ExecuteNonQuery();
+            MessageBox.Show("Registro eliminado");
+            llenar_tablaadmin();
+            conexion.Close();
         }
+        private void eliminar_registro_usuario(object sender, EventArgs e)
+        {
+            conexion.Open();
+            string consulta = "delete from Usuarios where ID = " + idbox.Text + "";
+            SqlCommand comando = new SqlCommand(consulta, conexion);
+            comando.ExecuteNonQuery();
+            MessageBox.Show("Registro eliminado");
+            llenar_tabla();
+            conexion.Close();
+        }
+
+
     }
 }
