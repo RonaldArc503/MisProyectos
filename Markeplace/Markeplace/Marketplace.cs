@@ -76,10 +76,10 @@ namespace Markeplace
 
         private void salirapp_Click(object sender, EventArgs e)
         {
-           
 
-            }
-        
+
+        }
+
     }
 }
 
