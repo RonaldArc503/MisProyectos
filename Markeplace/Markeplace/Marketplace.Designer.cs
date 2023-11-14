@@ -275,6 +275,7 @@
             Controls.Add(panel3);
             Controls.Add(panel2);
             Name = "Marketplace";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Marketplace";
             Load += Marketplace_Load;
             panel1.ResumeLayout(false);

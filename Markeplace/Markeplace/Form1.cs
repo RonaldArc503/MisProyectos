@@ -94,10 +94,7 @@ namespace Markeplace
 
 
                         }
-                        else
-                        {
-                            MessageBox.Show("No hay cuenta para estos datos. Regístrate.");
-                        }
+                        
                     }
                 }
             }

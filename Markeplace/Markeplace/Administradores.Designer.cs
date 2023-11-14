@@ -59,10 +59,10 @@
             label2 = new Label();
             textBox23 = new TextBox();
             panel8 = new Panel();
+            pictureBox5 = new PictureBox();
             deleteuser = new PictureBox();
             pictureBox11 = new PictureBox();
             pictureBox10 = new PictureBox();
-            pictureBox12 = new PictureBox();
             nameboxAdmins = new TextBox();
             emailboxAdmins = new TextBox();
             lastnboxAdmins = new TextBox();
@@ -86,10 +86,10 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             viewadmin.SuspendLayout();
             panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)deleteuser).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataadmins).BeginInit();
             panel3.SuspendLayout();
             SuspendLayout();
@@ -491,19 +491,31 @@
             // panel8
             // 
             panel8.BackColor = Color.FromArgb(33, 33, 33);
+            panel8.Controls.Add(pictureBox5);
             panel8.Controls.Add(deleteuser);
             panel8.Controls.Add(pictureBox11);
             panel8.Controls.Add(pictureBox10);
-            panel8.Controls.Add(pictureBox12);
             panel8.Location = new Point(0, 0);
             panel8.Name = "panel8";
             panel8.Size = new Size(83, 451);
             panel8.TabIndex = 45;
             // 
+            // pictureBox5
+            // 
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(26, 125);
+            pictureBox5.Margin = new Padding(0);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(30, 30);
+            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox5.TabIndex = 51;
+            pictureBox5.TabStop = false;
+            pictureBox5.Click += RegistrarBDA;
+            // 
             // deleteuser
             // 
             deleteuser.Image = (Image)resources.GetObject("deleteuser.Image");
-            deleteuser.Location = new Point(26, 195);
+            deleteuser.Location = new Point(26, 179);
             deleteuser.Margin = new Padding(0);
             deleteuser.Name = "deleteuser";
             deleteuser.Size = new Size(30, 30);
@@ -535,18 +547,6 @@
             pictureBox10.TabIndex = 49;
             pictureBox10.TabStop = false;
             pictureBox10.Click += verdatosactualizadosadmin_Click;
-            // 
-            // pictureBox12
-            // 
-            pictureBox12.Image = (Image)resources.GetObject("pictureBox12.Image");
-            pictureBox12.Location = new Point(26, 136);
-            pictureBox12.Margin = new Padding(0);
-            pictureBox12.Name = "pictureBox12";
-            pictureBox12.Size = new Size(30, 30);
-            pictureBox12.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox12.TabIndex = 47;
-            pictureBox12.TabStop = false;
-            pictureBox12.Click += verdatosactualizadosadmin_Click;
             // 
             // nameboxAdmins
             // 
@@ -776,10 +776,10 @@
             viewadmin.ResumeLayout(false);
             viewadmin.PerformLayout();
             panel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)deleteuser).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataadmins).EndInit();
             panel3.ResumeLayout(false);
             ResumeLayout(false);
@@ -826,7 +826,6 @@
         private PictureBox deleteuser;
         private PictureBox pictureBox10;
         private PictureBox pictureBox11;
-        private PictureBox pictureBox12;
         private TextBox textBox23;
         private TextBox nameboxAdmins;
         private TextBox emailboxAdmins;
@@ -844,5 +843,6 @@
         private Label label3;
         private Label label2;
         private Panel panel3;
+        private PictureBox pictureBox5;
     }
 }

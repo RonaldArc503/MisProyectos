@@ -176,6 +176,7 @@ namespace Markeplace
             MessageBox.Show("Registro eliminado");
             llenar_tablaadmin();
             conexion.Close();
+
         }
         private void eliminar_registro_usuario(object sender, EventArgs e)
         {
@@ -186,7 +187,101 @@ namespace Markeplace
             MessageBox.Show("Registro eliminado");
             llenar_tabla();
             conexion.Close();
+
         }
+
+
+
+
+
+
+
+
+        private void RegistrarBDA(object sender, EventArgs e)
+        {
+
+            try
+            {
+                if (string.IsNullOrWhiteSpace(nameboxAdmins.Text) ||
+                 string.IsNullOrWhiteSpace(lastnboxAdmins.Text) ||
+                 string.IsNullOrWhiteSpace(emailboxAdmins.Text) ||
+                 string.IsNullOrWhiteSpace(s_userbox.Text) ||
+                 string.IsNullOrWhiteSpace(s_userbox.Text) ||
+                 string.IsNullOrWhiteSpace(s_clavebox.Text)
+
+                 )
+                {
+
+
+                    MessageBox.Show("Faltan datos por llenar");
+                }
+
+                else
+                {
+
+                    conexion.Open();
+
+                    string name = nameboxAdmins.Text;
+                    string lastn = lastnamebox.Text;
+                    string email = emailboxAdmins.Text;
+                    string user = s_userbox.Text;
+                    string clave = s_clavebox.Text;
+
+
+
+
+
+
+
+
+
+                    string consulta = "INSERT INTO Administradores (Nombre, Apellido, Correo, Super_Usuario,Clave) " +
+                                        "VALUES (@Name, @Lastn, @Email, @User,@Clave )";
+                    using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@Name", name);
+                        comando.Parameters.AddWithValue("@Lastn", lastn);
+                        comando.Parameters.AddWithValue("@Email", email);
+                        comando.Parameters.AddWithValue("@User", user);
+                        comando.Parameters.AddWithValue("@Clave", clave);
+
+
+                        comando.ExecuteNonQuery();
+
+                        MessageBox.Show("Usted se ha Registrado, Gracias.");
+
+                        llenar_tablaadmin();
+
+                        idboxAdmins.Clear();
+                        nameboxAdmins.Clear();
+                        lastnamebox.Clear();
+                        emailboxAdmins.Clear();
+                        s_userbox.Clear();
+                        s_clavebox.Clear();
+
+                        conexion.Close();
+                    }
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("  ");
+            }
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
 
 
     }
