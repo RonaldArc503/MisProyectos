@@ -1,4 +1,15 @@
 using System.Data.SqlClient;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Drawing;
+using System.Runtime.InteropServices;
 
 namespace Markeplace
 {
@@ -87,12 +98,19 @@ namespace Markeplace
                         {
                             // user normales
 
+                           
+
                             Marketplace Finicio = new Marketplace();
                             Hide();
                             Finicio.ShowDialog();
                             Close();
 
 
+                        }
+
+                        else
+                        {
+                            MessageBox.Show("No existe cuenta");
                         }
                         
                     }

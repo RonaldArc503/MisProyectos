@@ -274,15 +274,12 @@ namespace Markeplace
 
         }
 
-
-
-
-
-
-
-
-
-
-
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            Home hm = new Home();
+            Hide();
+            hm.ShowDialog();
+            Close();
+        }
     }
 }

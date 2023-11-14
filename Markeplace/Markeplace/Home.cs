@@ -46,6 +46,11 @@ namespace Markeplace
             Close();
         }
 
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         //  private void panel2_Paint(object sender, PaintEventArgs e)
         //    {
         //        registro rt = new registro();

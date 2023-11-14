@@ -46,6 +46,7 @@
             perfilimage = new PictureBox();
             salirapp = new Label();
             panel3 = new Panel();
+            panel4 = new Panel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -65,9 +66,9 @@
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
-            panel1.Location = new Point(0, 170);
+            panel1.Location = new Point(0, 185);
             panel1.Name = "panel1";
-            panel1.Size = new Size(255, 377);
+            panel1.Size = new Size(255, 443);
             panel1.TabIndex = 0;
             // 
             // button8
@@ -128,7 +129,7 @@
             button4.Dock = DockStyle.Bottom;
             button4.FlatStyle = FlatStyle.Popup;
             button4.Font = new Font("Microsoft YaHei UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            button4.Location = new Point(0, 281);
+            button4.Location = new Point(0, 347);
             button4.Name = "button4";
             button4.Size = new Size(255, 48);
             button4.TabIndex = 3;
@@ -141,7 +142,7 @@
             button3.Dock = DockStyle.Bottom;
             button3.FlatStyle = FlatStyle.Popup;
             button3.Font = new Font("Microsoft YaHei UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.Location = new Point(0, 329);
+            button3.Location = new Point(0, 395);
             button3.Name = "button3";
             button3.Size = new Size(255, 48);
             button3.TabIndex = 2;
@@ -184,7 +185,7 @@
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(255, 547);
+            panel2.Size = new Size(255, 628);
             panel2.TabIndex = 1;
             // 
             // pictureBox3
@@ -254,6 +255,7 @@
             salirapp.Size = new Size(42, 21);
             salirapp.TabIndex = 6;
             salirapp.Text = "User";
+            salirapp.Click += salirapp_Click;
             // 
             // panel3
             // 
@@ -266,12 +268,22 @@
             panel3.Size = new Size(1008, 100);
             panel3.TabIndex = 7;
             // 
+            // panel4
+            // 
+            panel4.AutoScroll = true;
+            panel4.BackColor = Color.FromArgb(192, 255, 192);
+            panel4.Location = new Point(271, 125);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(980, 491);
+            panel4.TabIndex = 8;
+            // 
             // Marketplace
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1263, 547);
+            ClientSize = new Size(1263, 628);
+            Controls.Add(panel4);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Name = "Marketplace";
@@ -309,5 +321,6 @@
         private Button button6;
         private Button button5;
         private Panel panel3;
+        private Panel panel4;
     }
 }

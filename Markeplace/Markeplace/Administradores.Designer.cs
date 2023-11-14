@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administradores));
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             userbox = new TextBox();
             clavebox = new TextBox();
             lastnamebox = new TextBox();
@@ -77,6 +77,7 @@
             textBox36 = new TextBox();
             button2 = new Button();
             panel3 = new Panel();
+            pictureBox6 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)datauser).BeginInit();
             usuariosview.SuspendLayout();
             panel2.SuspendLayout();
@@ -92,6 +93,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataadmins).BeginInit();
             panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             SuspendLayout();
             // 
             // userbox
@@ -175,12 +177,12 @@
             // 
             // datauser
             // 
-            dataGridViewCellStyle3.BackColor = Color.Gainsboro;
-            dataGridViewCellStyle3.Font = new Font("Microsoft Tai Le", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = Color.Honeydew;
-            dataGridViewCellStyle3.SelectionForeColor = Color.White;
-            datauser.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = Color.Gainsboro;
+            dataGridViewCellStyle1.Font = new Font("Microsoft Tai Le", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = Color.Honeydew;
+            dataGridViewCellStyle1.SelectionForeColor = Color.White;
+            datauser.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             datauser.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             datauser.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             datauser.BackgroundColor = SystemColors.ControlDarkDark;
@@ -648,12 +650,12 @@
             // 
             // dataadmins
             // 
-            dataGridViewCellStyle4.BackColor = Color.Gainsboro;
-            dataGridViewCellStyle4.Font = new Font("Microsoft Tai Le", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = Color.Honeydew;
-            dataGridViewCellStyle4.SelectionForeColor = Color.White;
-            dataadmins.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.BackColor = Color.Gainsboro;
+            dataGridViewCellStyle2.Font = new Font("Microsoft Tai Le", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = Color.Honeydew;
+            dataGridViewCellStyle2.SelectionForeColor = Color.White;
+            dataadmins.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             dataadmins.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataadmins.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataadmins.BackgroundColor = SystemColors.ControlDarkDark;
@@ -742,20 +744,33 @@
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(33, 33, 33);
+            panel3.Controls.Add(pictureBox6);
             panel3.Controls.Add(button4);
             panel3.Controls.Add(button2);
             panel3.Dock = DockStyle.Left;
             panel3.Location = new Point(0, 0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(226, 540);
+            panel3.Size = new Size(226, 660);
             panel3.TabIndex = 51;
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.Location = new Point(23, 601);
+            pictureBox6.Margin = new Padding(0);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(35, 35);
+            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox6.TabIndex = 52;
+            pictureBox6.TabStop = false;
+            pictureBox6.Click += pictureBox6_Click;
             // 
             // Administradores
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(48, 48, 48);
-            ClientSize = new Size(1275, 540);
+            ClientSize = new Size(1275, 660);
             Controls.Add(panel3);
             Controls.Add(viewadmin);
             Controls.Add(usuariosview);
@@ -782,6 +797,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataadmins).EndInit();
             panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -844,5 +860,6 @@
         private Label label2;
         private Panel panel3;
         private PictureBox pictureBox5;
+        private PictureBox pictureBox6;
     }
 }

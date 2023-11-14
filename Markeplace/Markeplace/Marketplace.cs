@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Runtime.InteropServices;
+using System.Data.SqlClient;
 
 
 
@@ -72,6 +73,13 @@ namespace Markeplace
             hm.ShowDialog();
             Close();
         }
+
+        private void salirapp_Click(object sender, EventArgs e)
+        {
+           
+
+            }
+        
     }
 }
 

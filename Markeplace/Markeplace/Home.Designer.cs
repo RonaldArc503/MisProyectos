@@ -38,12 +38,14 @@
             pictureBox2 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
+            pictureBox6 = new PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -96,6 +98,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Palatino Linotype", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.White;
             label3.Location = new Point(91, 16);
             label3.Name = "label3";
             label3.Size = new Size(112, 32);
@@ -131,6 +134,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Palatino Linotype", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.White;
             label1.Location = new Point(91, 14);
             label1.Name = "label1";
             label1.Size = new Size(77, 32);
@@ -149,18 +153,32 @@
             label2.TabIndex = 15;
             label2.Text = "WELCOME";
             // 
+            // pictureBox6
+            // 
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.Location = new Point(474, 514);
+            pictureBox6.Margin = new Padding(0);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(35, 35);
+            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox6.TabIndex = 53;
+            pictureBox6.TabStop = false;
+            pictureBox6.Click += pictureBox6_Click;
+            // 
             // Home
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(2, 90, 69);
             ClientSize = new Size(847, 558);
+            Controls.Add(pictureBox6);
             Controls.Add(label2);
             Controls.Add(panel2);
             Controls.Add(panel3);
             Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Home";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Home";
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -170,6 +188,7 @@
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -185,5 +204,6 @@
         private PictureBox pictureBox2;
         private Label label1;
         private Label label2;
+        private PictureBox pictureBox6;
     }
 }
