@@ -169,11 +169,11 @@
             label1.AutoSize = true;
             label1.Font = new Font("Palatino Linotype", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(425, 9);
+            label1.Location = new Point(597, 18);
             label1.Name = "label1";
-            label1.Size = new Size(308, 50);
+            label1.Size = new Size(307, 50);
             label1.TabIndex = 27;
-            label1.Text = "Administradores";
+            label1.Text = "Panel de Control";
             // 
             // datauser
             // 
@@ -807,7 +807,7 @@
         private System.CodeDom.CodeTypeReference button1;
         private System.CodeDom.CodeTypeReference panel1;
         private System.CodeDom.CodeTypeReference dataGridView1;
-    
+
         private TextBox userbox;
         private TextBox clavebox;
         private TextBox lastnamebox;

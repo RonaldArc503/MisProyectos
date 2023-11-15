@@ -531,11 +531,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Win10\\Documents\\c33\\MisProyectos\\Markeplace\\Markeplace\\Markeplace.csproj",
+      "projectUniqueName": "C:\\Users\\Win10\\Desktop\\Nueva carpeta\\RonaldArc503\\MisProyectos\\Markeplace\\Markeplace\\Markeplace.csproj",
       "projectName": "Markeplace",
-      "projectPath": "C:\\Users\\Win10\\Documents\\c33\\MisProyectos\\Markeplace\\Markeplace\\Markeplace.csproj",
+      "projectPath": "C:\\Users\\Win10\\Desktop\\Nueva carpeta\\RonaldArc503\\MisProyectos\\Markeplace\\Markeplace\\Markeplace.csproj",
       "packagesPath": "C:\\Users\\Win10\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Win10\\Documents\\c33\\MisProyectos\\Markeplace\\Markeplace\\obj\\",
+      "outputPath": "C:\\Users\\Win10\\Desktop\\Nueva carpeta\\RonaldArc503\\MisProyectos\\Markeplace\\Markeplace\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
