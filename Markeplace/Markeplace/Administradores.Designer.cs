@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administradores));
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
             userbox = new TextBox();
             clavebox = new TextBox();
             lastnamebox = new TextBox();
@@ -177,12 +177,12 @@
             // 
             // datauser
             // 
-            dataGridViewCellStyle1.BackColor = Color.Gainsboro;
-            dataGridViewCellStyle1.Font = new Font("Microsoft Tai Le", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = Color.Honeydew;
-            dataGridViewCellStyle1.SelectionForeColor = Color.White;
-            datauser.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.BackColor = Color.Gainsboro;
+            dataGridViewCellStyle13.Font = new Font("Microsoft Tai Le", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle13.ForeColor = Color.Black;
+            dataGridViewCellStyle13.SelectionBackColor = Color.Honeydew;
+            dataGridViewCellStyle13.SelectionForeColor = Color.White;
+            datauser.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             datauser.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             datauser.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             datauser.BackgroundColor = SystemColors.ControlDarkDark;
@@ -331,7 +331,7 @@
             // 
             // button4
             // 
-            button4.BackColor = Color.FromArgb(48, 48, 48);
+            button4.BackColor = Color.FromArgb(0, 99, 136);
             button4.Font = new Font("Berlin Sans FB", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button4.ForeColor = Color.White;
             button4.Location = new Point(12, 129);
@@ -492,7 +492,7 @@
             // 
             // panel8
             // 
-            panel8.BackColor = Color.FromArgb(33, 33, 33);
+            panel8.BackColor = Color.FromArgb(0, 99, 136);
             panel8.Controls.Add(pictureBox5);
             panel8.Controls.Add(deleteuser);
             panel8.Controls.Add(pictureBox11);
@@ -650,12 +650,12 @@
             // 
             // dataadmins
             // 
-            dataGridViewCellStyle2.BackColor = Color.Gainsboro;
-            dataGridViewCellStyle2.Font = new Font("Microsoft Tai Le", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = Color.Honeydew;
-            dataGridViewCellStyle2.SelectionForeColor = Color.White;
-            dataadmins.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.BackColor = Color.Gainsboro;
+            dataGridViewCellStyle14.Font = new Font("Microsoft Tai Le", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle14.ForeColor = Color.Black;
+            dataGridViewCellStyle14.SelectionBackColor = Color.Honeydew;
+            dataGridViewCellStyle14.SelectionForeColor = Color.White;
+            dataadmins.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle14;
             dataadmins.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataadmins.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataadmins.BackgroundColor = SystemColors.ControlDarkDark;
@@ -730,7 +730,7 @@
             // 
             // button2
             // 
-            button2.BackColor = Color.FromArgb(48, 48, 48);
+            button2.BackColor = Color.FromArgb(0, 99, 136);
             button2.Font = new Font("Berlin Sans FB", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = Color.White;
             button2.Location = new Point(12, 72);
@@ -743,7 +743,7 @@
             // 
             // panel3
             // 
-            panel3.BackColor = Color.FromArgb(33, 33, 33);
+            panel3.BackColor = Color.FromArgb(47, 88, 157);
             panel3.Controls.Add(pictureBox6);
             panel3.Controls.Add(button4);
             panel3.Controls.Add(button2);
@@ -769,7 +769,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(48, 48, 48);
+            BackColor = Color.FromArgb(9, 36, 70);
             ClientSize = new Size(1275, 660);
             Controls.Add(panel3);
             Controls.Add(viewadmin);

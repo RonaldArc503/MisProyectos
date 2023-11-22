@@ -75,23 +75,26 @@
             // 
             // button9
             // 
-            button9.BackColor = Color.FromArgb(32, 238, 173);
+            button9.BackColor = Color.FromArgb(0, 99, 136);
             button9.Dock = DockStyle.Bottom;
             button9.FlatStyle = FlatStyle.Popup;
             button9.Font = new Font("Microsoft YaHei UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            button9.ForeColor = Color.White;
             button9.Location = new Point(0, 287);
             button9.Name = "button9";
             button9.Size = new Size(255, 48);
             button9.TabIndex = 8;
             button9.Text = "Ayuda";
             button9.UseVisualStyleBackColor = false;
+            button9.Click += button9_Click;
             // 
             // button8
             // 
-            button8.BackColor = Color.FromArgb(32, 238, 173);
+            button8.BackColor = Color.FromArgb(0, 99, 136);
             button8.Dock = DockStyle.Top;
             button8.FlatStyle = FlatStyle.Popup;
             button8.Font = new Font("Microsoft YaHei UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            button8.ForeColor = Color.White;
             button8.Location = new Point(0, 240);
             button8.Name = "button8";
             button8.Size = new Size(255, 48);
@@ -101,10 +104,11 @@
             // 
             // button7
             // 
-            button7.BackColor = Color.FromArgb(32, 238, 173);
+            button7.BackColor = Color.FromArgb(0, 99, 136);
             button7.Dock = DockStyle.Top;
             button7.FlatStyle = FlatStyle.Popup;
             button7.Font = new Font("Microsoft YaHei UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            button7.ForeColor = Color.White;
             button7.Location = new Point(0, 192);
             button7.Name = "button7";
             button7.Size = new Size(255, 48);
@@ -114,10 +118,11 @@
             // 
             // button6
             // 
-            button6.BackColor = Color.FromArgb(32, 238, 173);
+            button6.BackColor = Color.FromArgb(0, 99, 136);
             button6.Dock = DockStyle.Top;
             button6.FlatStyle = FlatStyle.Popup;
             button6.Font = new Font("Microsoft YaHei UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            button6.ForeColor = Color.White;
             button6.Location = new Point(0, 144);
             button6.Name = "button6";
             button6.Size = new Size(255, 48);
@@ -128,10 +133,11 @@
             // 
             // button5
             // 
-            button5.BackColor = Color.FromArgb(32, 238, 173);
+            button5.BackColor = Color.FromArgb(0, 99, 136);
             button5.Dock = DockStyle.Top;
             button5.FlatStyle = FlatStyle.Popup;
             button5.Font = new Font("Microsoft YaHei UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            button5.ForeColor = Color.White;
             button5.Location = new Point(0, 96);
             button5.Name = "button5";
             button5.Size = new Size(255, 48);
@@ -141,10 +147,11 @@
             // 
             // button4
             // 
-            button4.BackColor = Color.FromArgb(32, 238, 173);
+            button4.BackColor = Color.FromArgb(0, 99, 136);
             button4.Dock = DockStyle.Bottom;
             button4.FlatStyle = FlatStyle.Popup;
             button4.Font = new Font("Microsoft YaHei UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            button4.ForeColor = Color.White;
             button4.Location = new Point(0, 335);
             button4.Name = "button4";
             button4.Size = new Size(255, 48);
@@ -154,10 +161,11 @@
             // 
             // button3
             // 
-            button3.BackColor = Color.FromArgb(32, 238, 173);
+            button3.BackColor = Color.FromArgb(0, 99, 136);
             button3.Dock = DockStyle.Bottom;
             button3.FlatStyle = FlatStyle.Popup;
             button3.Font = new Font("Microsoft YaHei UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            button3.ForeColor = Color.White;
             button3.Location = new Point(0, 383);
             button3.Name = "button3";
             button3.Size = new Size(255, 48);
@@ -168,10 +176,11 @@
             // 
             // button2
             // 
-            button2.BackColor = Color.FromArgb(32, 238, 173);
+            button2.BackColor = Color.FromArgb(0, 99, 136);
             button2.Dock = DockStyle.Top;
             button2.FlatStyle = FlatStyle.Popup;
             button2.Font = new Font("Microsoft YaHei UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.ForeColor = Color.White;
             button2.Location = new Point(0, 48);
             button2.Name = "button2";
             button2.Size = new Size(255, 48);
@@ -181,10 +190,11 @@
             // 
             // button1
             // 
-            button1.BackColor = Color.FromArgb(32, 238, 173);
+            button1.BackColor = Color.FromArgb(0, 99, 136);
             button1.Dock = DockStyle.Top;
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Microsoft YaHei UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = Color.White;
             button1.Location = new Point(0, 0);
             button1.Name = "button1";
             button1.Size = new Size(255, 48);
@@ -195,7 +205,7 @@
             // 
             // panel2
             // 
-            panel2.BackColor = Color.FromArgb(26, 176, 140);
+            panel2.BackColor = Color.FromArgb(47, 88, 157);
             panel2.Controls.Add(pictureBox3);
             panel2.Controls.Add(panel1);
             panel2.Dock = DockStyle.Left;
@@ -208,7 +218,7 @@
             // 
             pictureBox3.BackgroundImageLayout = ImageLayout.None;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(46, 28);
+            pictureBox3.Location = new Point(54, 28);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(150, 150);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -267,6 +277,7 @@
             // 
             userdata.AutoSize = true;
             userdata.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            userdata.ForeColor = Color.White;
             userdata.Location = new Point(887, 41);
             userdata.Name = "userdata";
             userdata.Size = new Size(42, 21);
@@ -276,7 +287,7 @@
             // 
             // panel3
             // 
-            panel3.BackColor = Color.FromArgb(250, 255, 253);
+            panel3.BackColor = Color.FromArgb(9, 36, 70);
             panel3.Controls.Add(userdata);
             panel3.Controls.Add(buscador);
             panel3.Controls.Add(perfilimage);
@@ -289,7 +300,7 @@
             // panel4
             // 
             panel4.AutoScroll = true;
-            panel4.BackColor = Color.FromArgb(192, 255, 192);
+            panel4.BackColor = Color.FromArgb(0, 99, 136);
             panel4.Location = new Point(309, 140);
             panel4.Name = "panel4";
             panel4.Size = new Size(847, 430);
@@ -300,7 +311,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
+            BackColor = Color.FromArgb(9, 36, 70);
             ClientSize = new Size(1279, 628);
             Controls.Add(panel4);
             Controls.Add(panel3);
@@ -369,5 +380,6 @@
         private itemshop itemshop11;
         private itemshop itemshop12;
         private Button button9;
+        private Panel pnlayuda;
     }
 }

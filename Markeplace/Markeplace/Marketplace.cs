@@ -117,6 +117,14 @@ namespace Markeplace
         {
 
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Formulario_de_ayuda Fy = new Formulario_de_ayuda();
+            Hide();
+            Fy.ShowDialog();
+            Close();
+        }
     }
 }
 

@@ -51,7 +51,7 @@
             // 
             // perfiliconimg
             // 
-            perfiliconimg.BackColor = Color.FromArgb(79, 79, 79);
+            perfiliconimg.BackColor = Color.FromArgb(0, 99, 136);
             perfiliconimg.BackgroundImageLayout = ImageLayout.None;
             perfiliconimg.Image = (Image)resources.GetObject("perfiliconimg.Image");
             perfiliconimg.Location = new Point(12, 102);
@@ -134,7 +134,7 @@
             // 
             // datosuser
             // 
-            datosuser.BackColor = Color.FromArgb(79, 79, 79);
+            datosuser.BackColor = Color.FromArgb(0, 99, 136);
             datosuser.Controls.Add(lblcorreo);
             datosuser.Controls.Add(lbluser);
             datosuser.Controls.Add(lbllastname);
@@ -192,7 +192,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(41, 41, 41);
+            BackColor = Color.FromArgb(16, 48, 75);
             ClientSize = new Size(824, 401);
             Controls.Add(pictureBox2);
             Controls.Add(perfiliconimg);

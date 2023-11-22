@@ -59,7 +59,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(26, 176, 140);
+            panel1.BackColor = Color.FromArgb(47, 88, 157);
             panel1.Controls.Add(pictureBox1);
             panel1.ForeColor = Color.White;
             panel1.Location = new Point(536, -1);
@@ -70,7 +70,7 @@
             // 
             // Login
             // 
-            Login.BackColor = Color.FromArgb(26, 176, 140);
+            Login.BackColor = Color.FromArgb(0, 99, 136);
             Login.Font = new Font("SimSun-ExtB", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             Login.ForeColor = Color.White;
             Login.Location = new Point(174, 423);
@@ -114,6 +114,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Palatino Linotype", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.White;
             label1.Location = new Point(147, 29);
             label1.Name = "label1";
             label1.Size = new Size(163, 50);
@@ -138,6 +139,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.White;
             label2.Location = new Point(42, 299);
             label2.Name = "label2";
             label2.Size = new Size(196, 25);
@@ -164,7 +166,7 @@
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Segoe UI", 9.75F, FontStyle.Underline, GraphicsUnit.Point);
-            label4.ForeColor = Color.FromArgb(0, 0, 192);
+            label4.ForeColor = Color.White;
             label4.Location = new Point(194, 477);
             label4.Name = "label4";
             label4.Size = new Size(132, 17);
@@ -218,7 +220,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
+            BackColor = Color.FromArgb(9, 36, 70);
             ClientSize = new Size(1063, 633);
             Controls.Add(userbox);
             Controls.Add(yearbox);

@@ -50,7 +50,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(69, 211, 178);
+            panel1.BackColor = Color.FromArgb(47, 88, 157);
             panel1.Controls.Add(pictureBox1);
             panel1.ForeColor = Color.White;
             panel1.Location = new Point(-27, -3);
@@ -72,7 +72,7 @@
             // 
             // panel2
             // 
-            panel2.BackColor = Color.FromArgb(0, 122, 94);
+            panel2.BackColor = Color.FromArgb(0, 99, 136);
             panel2.Controls.Add(pictureBox3);
             panel2.Controls.Add(label3);
             panel2.Location = new Point(543, 317);
@@ -97,6 +97,7 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = Color.FromArgb(0, 99, 136);
             label3.Font = new Font("Palatino Linotype", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.White;
             label3.Location = new Point(91, 16);
@@ -108,7 +109,7 @@
             // 
             // panel3
             // 
-            panel3.BackColor = Color.FromArgb(0, 122, 94);
+            panel3.BackColor = Color.FromArgb(0, 99, 136);
             panel3.Controls.Add(pictureBox2);
             panel3.Controls.Add(label1);
             panel3.Location = new Point(543, 235);
@@ -146,7 +147,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 40F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = Color.FromArgb(69, 211, 178);
+            label2.ForeColor = Color.White;
             label2.Location = new Point(534, 42);
             label2.Name = "label2";
             label2.Size = new Size(278, 72);
@@ -169,7 +170,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(2, 90, 69);
+            BackColor = Color.FromArgb(9, 36, 70);
             ClientSize = new Size(847, 558);
             Controls.Add(pictureBox6);
             Controls.Add(label2);
