@@ -48,7 +48,6 @@
             userdata = new Label();
             panel3 = new Panel();
             panel4 = new Panel();
-            itemshop28 = new itemshop();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -56,7 +55,6 @@
             buscador.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)perfilimage).BeginInit();
             panel3.SuspendLayout();
-            panel4.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -304,20 +302,11 @@
             // 
             panel4.AutoScroll = true;
             panel4.BackColor = Color.FromArgb(0, 99, 136);
-            panel4.Controls.Add(itemshop28);
             panel4.Location = new Point(309, 140);
             panel4.Name = "panel4";
             panel4.Size = new Size(909, 430);
             panel4.TabIndex = 8;
             panel4.Paint += panel4_Paint;
-            // 
-            // itemshop28
-            // 
-            itemshop28.BackColor = Color.White;
-            itemshop28.Location = new Point(28, 29);
-            itemshop28.Name = "itemshop28";
-            itemshop28.Size = new Size(263, 253);
-            itemshop28.TabIndex = 0;
             // 
             // Marketplace
             // 
@@ -341,7 +330,6 @@
             ((System.ComponentModel.ISupportInitialize)perfilimage).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
-            panel4.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -394,6 +382,5 @@
         private itemshop itemshop12;
         private Button btnayuda;
         private Panel pnlayuda;
-        private itemshop itemshop28;
     }
 }
