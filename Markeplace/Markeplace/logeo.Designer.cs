@@ -138,6 +138,7 @@
             // Login
             // 
             Login.BackColor = Color.FromArgb(26, 176, 140);
+            Login.FlatStyle = FlatStyle.Flat;
             Login.Font = new Font("SimSun-ExtB", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             Login.ForeColor = Color.White;
             Login.Location = new Point(717, 521);

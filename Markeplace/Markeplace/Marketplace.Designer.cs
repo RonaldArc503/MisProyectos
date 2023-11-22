@@ -47,6 +47,7 @@
             userdata = new Label();
             panel3 = new Panel();
             panel4 = new Panel();
+            button9 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -58,6 +59,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(button9);
             panel1.Controls.Add(button8);
             panel1.Controls.Add(button7);
             panel1.Controls.Add(button6);
@@ -66,9 +68,9 @@
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
-            panel1.Location = new Point(0, 185);
+            panel1.Location = new Point(0, 197);
             panel1.Name = "panel1";
-            panel1.Size = new Size(255, 443);
+            panel1.Size = new Size(255, 431);
             panel1.TabIndex = 0;
             // 
             // button8
@@ -109,6 +111,7 @@
             button6.TabIndex = 5;
             button6.Text = "Tecnologia";
             button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
             // button5
             // 
@@ -129,7 +132,7 @@
             button4.Dock = DockStyle.Bottom;
             button4.FlatStyle = FlatStyle.Popup;
             button4.Font = new Font("Microsoft YaHei UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            button4.Location = new Point(0, 347);
+            button4.Location = new Point(0, 335);
             button4.Name = "button4";
             button4.Size = new Size(255, 48);
             button4.TabIndex = 3;
@@ -142,7 +145,7 @@
             button3.Dock = DockStyle.Bottom;
             button3.FlatStyle = FlatStyle.Popup;
             button3.Font = new Font("Microsoft YaHei UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.Location = new Point(0, 395);
+            button3.Location = new Point(0, 383);
             button3.Name = "button3";
             button3.Size = new Size(255, 48);
             button3.TabIndex = 2;
@@ -192,9 +195,9 @@
             // 
             pictureBox3.BackgroundImageLayout = ImageLayout.None;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(76, 24);
+            pictureBox3.Location = new Point(46, 28);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(98, 97);
+            pictureBox3.Size = new Size(150, 150);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 1;
             pictureBox3.TabStop = false;
@@ -273,12 +276,24 @@
             // 
             panel4.AutoScroll = true;
             panel4.BackColor = Color.FromArgb(192, 255, 192);
-            panel4.Dock = DockStyle.Fill;
-            panel4.Location = new Point(255, 100);
+            panel4.Location = new Point(309, 140);
             panel4.Name = "panel4";
-            panel4.Size = new Size(1024, 528);
+            panel4.Size = new Size(847, 430);
             panel4.TabIndex = 8;
             panel4.Paint += panel4_Paint;
+            // 
+            // button9
+            // 
+            button9.BackColor = Color.FromArgb(32, 238, 173);
+            button9.Dock = DockStyle.Bottom;
+            button9.FlatStyle = FlatStyle.Popup;
+            button9.Font = new Font("Microsoft YaHei UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            button9.Location = new Point(0, 287);
+            button9.Name = "button9";
+            button9.Size = new Size(255, 48);
+            button9.TabIndex = 8;
+            button9.Text = "Ayuda";
+            button9.UseVisualStyleBackColor = false;
             // 
             // Marketplace
             // 
@@ -352,5 +367,6 @@
         private itemshop itemshop10;
         private itemshop itemshop11;
         private itemshop itemshop12;
+        private Button button9;
     }
 }

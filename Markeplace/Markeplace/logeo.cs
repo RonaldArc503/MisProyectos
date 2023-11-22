@@ -1,4 +1,3 @@
-using System.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Runtime.InteropServices;
+using System.Data.SqlClient;
 
 namespace Markeplace
 {
@@ -18,7 +18,26 @@ namespace Markeplace
         public logeo()
         {
             InitializeComponent();
+            IntPtr perfilimageRegion = CreateRoundRectRgn(0, 0, Login.Width, Login.Height, 50, 50);
+            // IntPtr busRegion = CreateRoundRectRgn(0, 0, password.Width, password.Height, 30, 30);
+
+
+            //user.Region = System.Drawing.Region.FromHrgn(busRegion);
+            Login.Region = System.Drawing.Region.FromHrgn(perfilimageRegion);
+
         }
+
+
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+                (
+                    int nLeftRect,
+                    int nTopRect,
+                    int nRightRect,
+                    int nBottomRect,
+                    int nWidthEllipse,
+                    int nHeightEllipse
+                );
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -107,16 +126,16 @@ namespace Markeplace
                                     if (lector.Read())
                                     {
                                         int id = (int)lector["ID"];
-                                      //  string id = lector["ID"].ToString();
+                                        //  string id = lector["ID"].ToString();
                                         string nombre = lector["Nombre"].ToString();
                                         string apellido = lector["Apellido"].ToString();
 
-                                     
+
                                         Marketplace Finicio = new Marketplace();
                                         Finicio.ID = id;
                                         Finicio.Usuario = usuario;
                                         Finicio.Nombre = nombre;
-                                        Finicio.Apellido = apellido; 
+                                        Finicio.Apellido = apellido;
 
                                         Hide();
                                         Finicio.ShowDialog();
@@ -125,11 +144,11 @@ namespace Markeplace
                                 }
                             }
                         }
-                    
+
 
 
                         else
-                    {
+                        {
                             MessageBox.Show("No existe cuenta");
                         }
 
@@ -144,22 +163,22 @@ namespace Markeplace
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-          
-            
-                if (password.PasswordChar == '*')
-                {
-                   
-                    password.PasswordChar = '\0';  
-                }
-                else
-                {
-                  
-                    password.PasswordChar = '*';
-                }
+
+
+            if (password.PasswordChar == '*')
+            {
+
+                password.PasswordChar = '\0';
             }
+            else
+            {
+
+                password.PasswordChar = '*';
+            }
+        }
 
 
 
-        
+
     }
 }

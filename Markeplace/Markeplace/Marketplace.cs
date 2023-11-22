@@ -87,11 +87,11 @@ namespace Markeplace
         {
             Perfil perfilForm = new Perfil();
             perfilForm.ID = this.ID;
-            perfilForm.Usuario = this.Usuario; // Pasar el nombre de usuario al formulario Perfil
-            perfilForm.Nombre = this.Nombre; // Pasar el nombre al formulario Perfil
-            perfilForm.Apellido = this.Apellido; // Pasar el apellido al formulario Perfil
+            perfilForm.Usuario = this.Usuario;
+            perfilForm.Nombre = this.Nombre;
+            perfilForm.Apellido = this.Apellido;
             Hide();
-            perfilForm.ShowDialog(); // Mostrar el formulario Perfil
+            perfilForm.ShowDialog();
 
 
 
@@ -101,12 +101,12 @@ namespace Markeplace
 
         private void perfilimage_Click(object sender, EventArgs e)
         {
-            
 
 
 
 
-            
+
+
             Perfil perfilForm = new Perfil();
             perfilForm.Usuario = this.Usuario; // Pasar el nombre de usuario al formulario Perfil
             perfilForm.Nombre = this.Nombre; // Pasar el nombre al formulario Perfil
@@ -114,12 +114,17 @@ namespace Markeplace
             Hide();
             perfilForm.ShowDialog(); // Mostrar el formulario Perfil
 
-          
-            
+
+
             Close();
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
         {
 
         }

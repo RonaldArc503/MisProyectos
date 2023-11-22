@@ -1,5 +1,4 @@
-﻿using System.Data.SqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Runtime.InteropServices;
+using System.Data.SqlClient;
 
 namespace Markeplace
 {
@@ -18,6 +18,13 @@ namespace Markeplace
         public Perfil()
         {
             InitializeComponent();
+            IntPtr perfilimageRegion = CreateRoundRectRgn(0, 0, perfiliconimg.Width, perfiliconimg.Height, 200, 200);
+            IntPtr busRegion = CreateRoundRectRgn(0, 0, datosuser.Width, datosuser.Height, 30, 30);
+
+
+            datosuser.Region = System.Drawing.Region.FromHrgn(busRegion);
+            perfiliconimg.Region = System.Drawing.Region.FromHrgn(perfilimageRegion);
+
         }
 
         private string connectionString = "Server=DESKTOP-LALT64T; database=Markeplace; integrated security=true";
@@ -26,6 +33,18 @@ namespace Markeplace
         public string Usuario { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
+
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+                (
+                    int nLeftRect,
+                    int nTopRect,
+                    int nRightRect,
+                    int nBottomRect,
+                    int nWidthEllipse,
+                    int nHeightEllipse
+                );
+
 
         private void Perfil_Load(object sender, EventArgs e)
         {
@@ -90,7 +109,27 @@ namespace Markeplace
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            editdatos.Visible = true;
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Marketplace Finicio = new Marketplace();
+            Finicio.ID = this.ID;
+            Finicio.Usuario = this.Usuario;
+            Finicio.Nombre = this.Nombre;
+            Finicio.Apellido = this.Apellido;
+            Hide();
+            Finicio.ShowDialog();
+            Close();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Home hm = new Home();
+            Hide();
+            hm.ShowDialog();
+            Close();
         }
     }
 
