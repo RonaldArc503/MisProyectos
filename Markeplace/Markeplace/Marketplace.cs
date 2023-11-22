@@ -113,9 +113,26 @@ namespace Markeplace
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
+            btnvestimenta.Visible = !btnvestimenta.Visible;
+            btntec.Visible = !btntec.Visible;
+            btnelec.Visible = !btnelec.Visible;
+            btnre.Visible = !btnre.Visible;
 
+            if (!btnvestimenta.Visible)
+            {
+                btnayuda.Dock = DockStyle.Top;
+                btnajustes.Dock = DockStyle.Top;
+                btnsalir.Dock = DockStyle.Top;
+            }
+            else if (btnvestimenta.Visible)
+            {
+
+                btnayuda.Dock = DockStyle.Bottom;
+                btnajustes.Dock = DockStyle.Bottom;
+                btnsalir.Dock = DockStyle.Bottom;
+            }
         }
 
         private void button9_Click(object sender, EventArgs e)

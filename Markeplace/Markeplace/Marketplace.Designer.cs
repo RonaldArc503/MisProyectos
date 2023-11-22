@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Marketplace));
             panel1 = new Panel();
-            button9 = new Button();
-            button8 = new Button();
-            button7 = new Button();
-            button6 = new Button();
-            button5 = new Button();
-            button4 = new Button();
-            button3 = new Button();
+            btnayuda = new Button();
+            btnelec = new Button();
+            btnre = new Button();
+            btntec = new Button();
+            btnvestimenta = new Button();
+            btnajustes = new Button();
+            btnsalir = new Button();
             button2 = new Button();
             button1 = new Button();
             panel2 = new Panel();
@@ -59,13 +59,13 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(button9);
-            panel1.Controls.Add(button8);
-            panel1.Controls.Add(button7);
-            panel1.Controls.Add(button6);
-            panel1.Controls.Add(button5);
-            panel1.Controls.Add(button4);
-            panel1.Controls.Add(button3);
+            panel1.Controls.Add(btnayuda);
+            panel1.Controls.Add(btnelec);
+            panel1.Controls.Add(btnre);
+            panel1.Controls.Add(btntec);
+            panel1.Controls.Add(btnvestimenta);
+            panel1.Controls.Add(btnajustes);
+            panel1.Controls.Add(btnsalir);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
             panel1.Location = new Point(0, 197);
@@ -73,106 +73,106 @@
             panel1.Size = new Size(255, 431);
             panel1.TabIndex = 0;
             // 
-            // button9
+            // btnayuda
             // 
-            button9.BackColor = Color.FromArgb(0, 99, 136);
-            button9.Dock = DockStyle.Bottom;
-            button9.FlatStyle = FlatStyle.Popup;
-            button9.Font = new Font("Microsoft YaHei UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            button9.ForeColor = Color.White;
-            button9.Location = new Point(0, 287);
-            button9.Name = "button9";
-            button9.Size = new Size(255, 48);
-            button9.TabIndex = 8;
-            button9.Text = "Ayuda";
-            button9.UseVisualStyleBackColor = false;
-            button9.Click += button9_Click;
+            btnayuda.BackColor = Color.FromArgb(0, 99, 136);
+            btnayuda.Dock = DockStyle.Bottom;
+            btnayuda.FlatStyle = FlatStyle.Popup;
+            btnayuda.Font = new Font("Microsoft YaHei UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            btnayuda.ForeColor = Color.White;
+            btnayuda.Location = new Point(0, 287);
+            btnayuda.Name = "btnayuda";
+            btnayuda.Size = new Size(255, 48);
+            btnayuda.TabIndex = 8;
+            btnayuda.Text = "Ayuda";
+            btnayuda.UseVisualStyleBackColor = false;
+            btnayuda.Click += button9_Click;
             // 
-            // button8
+            // btnelec
             // 
-            button8.BackColor = Color.FromArgb(0, 99, 136);
-            button8.Dock = DockStyle.Top;
-            button8.FlatStyle = FlatStyle.Popup;
-            button8.Font = new Font("Microsoft YaHei UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            button8.ForeColor = Color.White;
-            button8.Location = new Point(0, 240);
-            button8.Name = "button8";
-            button8.Size = new Size(255, 48);
-            button8.TabIndex = 7;
-            button8.Text = "Electronica";
-            button8.UseVisualStyleBackColor = false;
+            btnelec.BackColor = Color.FromArgb(0, 99, 136);
+            btnelec.Dock = DockStyle.Top;
+            btnelec.FlatStyle = FlatStyle.Popup;
+            btnelec.Font = new Font("Microsoft YaHei UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            btnelec.ForeColor = Color.White;
+            btnelec.Location = new Point(0, 240);
+            btnelec.Name = "btnelec";
+            btnelec.Size = new Size(255, 48);
+            btnelec.TabIndex = 7;
+            btnelec.Text = "Electronica";
+            btnelec.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // btnre
             // 
-            button7.BackColor = Color.FromArgb(0, 99, 136);
-            button7.Dock = DockStyle.Top;
-            button7.FlatStyle = FlatStyle.Popup;
-            button7.Font = new Font("Microsoft YaHei UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            button7.ForeColor = Color.White;
-            button7.Location = new Point(0, 192);
-            button7.Name = "button7";
-            button7.Size = new Size(255, 48);
-            button7.TabIndex = 6;
-            button7.Text = "Repuestos";
-            button7.UseVisualStyleBackColor = false;
+            btnre.BackColor = Color.FromArgb(0, 99, 136);
+            btnre.Dock = DockStyle.Top;
+            btnre.FlatStyle = FlatStyle.Popup;
+            btnre.Font = new Font("Microsoft YaHei UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            btnre.ForeColor = Color.White;
+            btnre.Location = new Point(0, 192);
+            btnre.Name = "btnre";
+            btnre.Size = new Size(255, 48);
+            btnre.TabIndex = 6;
+            btnre.Text = "Repuestos";
+            btnre.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // btntec
             // 
-            button6.BackColor = Color.FromArgb(0, 99, 136);
-            button6.Dock = DockStyle.Top;
-            button6.FlatStyle = FlatStyle.Popup;
-            button6.Font = new Font("Microsoft YaHei UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            button6.ForeColor = Color.White;
-            button6.Location = new Point(0, 144);
-            button6.Name = "button6";
-            button6.Size = new Size(255, 48);
-            button6.TabIndex = 5;
-            button6.Text = "Tecnologia";
-            button6.UseVisualStyleBackColor = false;
-            button6.Click += button6_Click;
+            btntec.BackColor = Color.FromArgb(0, 99, 136);
+            btntec.Dock = DockStyle.Top;
+            btntec.FlatStyle = FlatStyle.Popup;
+            btntec.Font = new Font("Microsoft YaHei UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            btntec.ForeColor = Color.White;
+            btntec.Location = new Point(0, 144);
+            btntec.Name = "btntec";
+            btntec.Size = new Size(255, 48);
+            btntec.TabIndex = 5;
+            btntec.Text = "Tecnologia";
+            btntec.UseVisualStyleBackColor = false;
+            btntec.Click += button2_Click;
             // 
-            // button5
+            // btnvestimenta
             // 
-            button5.BackColor = Color.FromArgb(0, 99, 136);
-            button5.Dock = DockStyle.Top;
-            button5.FlatStyle = FlatStyle.Popup;
-            button5.Font = new Font("Microsoft YaHei UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            button5.ForeColor = Color.White;
-            button5.Location = new Point(0, 96);
-            button5.Name = "button5";
-            button5.Size = new Size(255, 48);
-            button5.TabIndex = 4;
-            button5.Text = "Vestimenta";
-            button5.UseVisualStyleBackColor = false;
+            btnvestimenta.BackColor = Color.FromArgb(0, 99, 136);
+            btnvestimenta.Dock = DockStyle.Top;
+            btnvestimenta.FlatStyle = FlatStyle.Popup;
+            btnvestimenta.Font = new Font("Microsoft YaHei UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            btnvestimenta.ForeColor = Color.White;
+            btnvestimenta.Location = new Point(0, 96);
+            btnvestimenta.Name = "btnvestimenta";
+            btnvestimenta.Size = new Size(255, 48);
+            btnvestimenta.TabIndex = 4;
+            btnvestimenta.Text = "Vestimenta";
+            btnvestimenta.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnajustes
             // 
-            button4.BackColor = Color.FromArgb(0, 99, 136);
-            button4.Dock = DockStyle.Bottom;
-            button4.FlatStyle = FlatStyle.Popup;
-            button4.Font = new Font("Microsoft YaHei UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            button4.ForeColor = Color.White;
-            button4.Location = new Point(0, 335);
-            button4.Name = "button4";
-            button4.Size = new Size(255, 48);
-            button4.TabIndex = 3;
-            button4.Text = "Ajustes";
-            button4.UseVisualStyleBackColor = false;
+            btnajustes.BackColor = Color.FromArgb(0, 99, 136);
+            btnajustes.Dock = DockStyle.Bottom;
+            btnajustes.FlatStyle = FlatStyle.Popup;
+            btnajustes.Font = new Font("Microsoft YaHei UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            btnajustes.ForeColor = Color.White;
+            btnajustes.Location = new Point(0, 335);
+            btnajustes.Name = "btnajustes";
+            btnajustes.Size = new Size(255, 48);
+            btnajustes.TabIndex = 3;
+            btnajustes.Text = "Ajustes";
+            btnajustes.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnsalir
             // 
-            button3.BackColor = Color.FromArgb(0, 99, 136);
-            button3.Dock = DockStyle.Bottom;
-            button3.FlatStyle = FlatStyle.Popup;
-            button3.Font = new Font("Microsoft YaHei UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(0, 383);
-            button3.Name = "button3";
-            button3.Size = new Size(255, 48);
-            button3.TabIndex = 2;
-            button3.Text = "Cerrar Sesion";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click_1;
+            btnsalir.BackColor = Color.FromArgb(0, 99, 136);
+            btnsalir.Dock = DockStyle.Bottom;
+            btnsalir.FlatStyle = FlatStyle.Popup;
+            btnsalir.Font = new Font("Microsoft YaHei UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            btnsalir.ForeColor = Color.White;
+            btnsalir.Location = new Point(0, 383);
+            btnsalir.Name = "btnsalir";
+            btnsalir.Size = new Size(255, 48);
+            btnsalir.TabIndex = 2;
+            btnsalir.Text = "Cerrar Sesion";
+            btnsalir.UseVisualStyleBackColor = false;
+            btnsalir.Click += button3_Click_1;
             // 
             // button2
             // 
@@ -187,6 +187,7 @@
             button2.TabIndex = 1;
             button2.Text = "Categoria";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
@@ -342,14 +343,14 @@
         private TextBox textBox1;
         private PictureBox pictureBox1;
         private Panel buscador;
-        private Button button4;
-        private Button button3;
+        private Button btnajustes;
+        private Button btnsalir;
         private PictureBox perfilimage;
         private Label userdata;
-        private Button button8;
-        private Button button7;
-        private Button button6;
-        private Button button5;
+        private Button btnelec;
+        private Button btnre;
+        private Button btntec;
+        private Button btnvestimenta;
         private Panel panel3;
         private itemshop itemshop1;
         private itemshop itemshop2;
@@ -379,7 +380,7 @@
         private itemshop itemshop10;
         private itemshop itemshop11;
         private itemshop itemshop12;
-        private Button button9;
+        private Button btnayuda;
         private Panel pnlayuda;
     }
 }
