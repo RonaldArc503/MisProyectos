@@ -19,6 +19,14 @@ namespace Markeplace
 
 
     {
+        public int ID { get; set; }
+        public string Usuario { get; set; }
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+
+
+
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
                 (
@@ -50,7 +58,8 @@ namespace Markeplace
 
         private void Marketplace_Load(object sender, EventArgs e)
         {
-
+            string nombreCompleto = Nombre + " " + Apellido;
+            userdata.Text = nombreCompleto;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -76,16 +85,43 @@ namespace Markeplace
 
         private void salirapp_Click(object sender, EventArgs e)
         {
+            Perfil perfilForm = new Perfil();
+            perfilForm.ID = this.ID;
+            perfilForm.Usuario = this.Usuario; // Pasar el nombre de usuario al formulario Perfil
+            perfilForm.Nombre = this.Nombre; // Pasar el nombre al formulario Perfil
+            perfilForm.Apellido = this.Apellido; // Pasar el apellido al formulario Perfil
+            Hide();
+            perfilForm.ShowDialog(); // Mostrar el formulario Perfil
 
+
+
+            Close();
 
         }
 
         private void perfilimage_Click(object sender, EventArgs e)
         {
-            Perfil pf = new Perfil();
+            
+
+
+
+
+            
+            Perfil perfilForm = new Perfil();
+            perfilForm.Usuario = this.Usuario; // Pasar el nombre de usuario al formulario Perfil
+            perfilForm.Nombre = this.Nombre; // Pasar el nombre al formulario Perfil
+            perfilForm.Apellido = this.Apellido; // Pasar el apellido al formulario Perfil
             Hide();
-            pf.ShowDialog();
+            perfilForm.ShowDialog(); // Mostrar el formulario Perfil
+
+          
+            
             Close();
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

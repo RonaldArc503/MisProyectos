@@ -30,16 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Perfil));
             perfilimage = new PictureBox();
-            label1 = new Label();
             label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
             linkLabel1 = new LinkLabel();
-            lblemail = new Label();
             lblname = new Label();
             lbllastname = new Label();
             lbluser = new Label();
-            panel1 = new Panel();
+            editdatos = new Panel();
             txtactualcontra = new TextBox();
             label5 = new Label();
             confirmar = new Button();
@@ -58,8 +54,9 @@
             label12 = new Label();
             label11 = new Label();
             label16 = new Label();
+            lblcorreo = new Label();
             ((System.ComponentModel.ISupportInitialize)perfilimage).BeginInit();
-            panel1.SuspendLayout();
+            editdatos.SuspendLayout();
             SuspendLayout();
             // 
             // perfilimage
@@ -67,54 +64,27 @@
             perfilimage.BackColor = Color.Transparent;
             perfilimage.BackgroundImageLayout = ImageLayout.None;
             perfilimage.Image = (Image)resources.GetObject("perfilimage.Image");
-            perfilimage.Location = new Point(37, 28);
+            perfilimage.Location = new Point(26, 46);
             perfilimage.Name = "perfilimage";
-            perfilimage.Size = new Size(126, 135);
+            perfilimage.Size = new Size(126, 124);
             perfilimage.SizeMode = PictureBoxSizeMode.StretchImage;
             perfilimage.TabIndex = 3;
             perfilimage.TabStop = false;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(12, 166);
-            label1.Name = "label1";
-            label1.Size = new Size(66, 15);
-            label1.TabIndex = 5;
-            label1.Text = "Username :";
-            // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(12, 254);
+            label2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(269, 46);
             label2.Name = "label2";
-            label2.Size = new Size(64, 15);
+            label2.Size = new Size(0, 19);
             label2.TabIndex = 6;
-            label2.Text = "Lastname :";
             label2.Click += label2_Click;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(11, 212);
-            label3.Name = "label3";
-            label3.Size = new Size(65, 15);
-            label3.TabIndex = 7;
-            label3.Text = "Firstname :";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(12, 305);
-            label4.Name = "label4";
-            label4.Size = new Size(42, 15);
-            label4.TabIndex = 8;
-            label4.Text = "Email :";
             // 
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(79, 370);
+            linkLabel1.Location = new Point(184, 262);
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(64, 15);
             linkLabel1.TabIndex = 9;
@@ -122,80 +92,68 @@
             linkLabel1.Text = "Edit profile";
             linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
-            // lblemail
-            // 
-            lblemail.AutoSize = true;
-            lblemail.BackColor = Color.White;
-            lblemail.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            lblemail.ForeColor = Color.Gray;
-            lblemail.Location = new Point(12, 320);
-            lblemail.Name = "lblemail";
-            lblemail.Size = new Size(34, 13);
-            lblemail.TabIndex = 13;
-            lblemail.Text = "Email";
-            // 
             // lblname
             // 
             lblname.AutoSize = true;
-            lblname.BackColor = Color.White;
-            lblname.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            lblname.ForeColor = Color.Gray;
-            lblname.Location = new Point(11, 227);
+            lblname.BackColor = Color.Transparent;
+            lblname.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblname.ForeColor = Color.Black;
+            lblname.Location = new Point(181, 107);
             lblname.Name = "lblname";
-            lblname.Size = new Size(35, 13);
+            lblname.Size = new Size(41, 19);
             lblname.TabIndex = 12;
             lblname.Text = "name";
             // 
             // lbllastname
             // 
             lbllastname.AutoSize = true;
-            lbllastname.BackColor = Color.White;
-            lbllastname.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            lbllastname.ForeColor = Color.Gray;
-            lbllastname.Location = new Point(12, 269);
+            lbllastname.BackColor = Color.Transparent;
+            lbllastname.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lbllastname.ForeColor = Color.Black;
+            lbllastname.Location = new Point(181, 147);
             lbllastname.Name = "lbllastname";
-            lbllastname.Size = new Size(55, 13);
+            lbllastname.Size = new Size(67, 19);
             lbllastname.TabIndex = 11;
             lbllastname.Text = "Lastname";
             // 
             // lbluser
             // 
             lbluser.AutoSize = true;
-            lbluser.BackColor = Color.White;
-            lbluser.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            lbluser.ForeColor = Color.Gray;
-            lbluser.Location = new Point(12, 181);
+            lbluser.BackColor = Color.Transparent;
+            lbluser.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lbluser.ForeColor = Color.Black;
+            lbluser.Location = new Point(181, 70);
             lbluser.Name = "lbluser";
-            lbluser.Size = new Size(30, 13);
+            lbluser.Size = new Size(38, 19);
             lbluser.TabIndex = 10;
             lbluser.Text = "User";
             // 
-            // panel1
+            // editdatos
             // 
-            panel1.BackColor = Color.FromArgb(26, 176, 140);
-            panel1.Controls.Add(txtactualcontra);
-            panel1.Controls.Add(label5);
-            panel1.Controls.Add(confirmar);
-            panel1.Controls.Add(cancelar);
-            panel1.Controls.Add(label15);
-            panel1.Controls.Add(txtconfirmarcontra);
-            panel1.Controls.Add(txtcontra);
-            panel1.Controls.Add(label13);
-            panel1.Controls.Add(label14);
-            panel1.Controls.Add(txtemail);
-            panel1.Controls.Add(txtlastname);
-            panel1.Controls.Add(txtfirstname);
-            panel1.Controls.Add(txtusername);
-            panel1.Controls.Add(label9);
-            panel1.Controls.Add(label10);
-            panel1.Controls.Add(label12);
-            panel1.Controls.Add(label11);
-            panel1.Dock = DockStyle.Right;
-            panel1.Location = new Point(245, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(253, 433);
-            panel1.TabIndex = 14;
-            panel1.Visible = false;
+            editdatos.BackColor = Color.FromArgb(26, 176, 140);
+            editdatos.Controls.Add(txtactualcontra);
+            editdatos.Controls.Add(label5);
+            editdatos.Controls.Add(confirmar);
+            editdatos.Controls.Add(cancelar);
+            editdatos.Controls.Add(label15);
+            editdatos.Controls.Add(txtconfirmarcontra);
+            editdatos.Controls.Add(txtcontra);
+            editdatos.Controls.Add(label13);
+            editdatos.Controls.Add(label14);
+            editdatos.Controls.Add(txtemail);
+            editdatos.Controls.Add(txtlastname);
+            editdatos.Controls.Add(txtfirstname);
+            editdatos.Controls.Add(txtusername);
+            editdatos.Controls.Add(label9);
+            editdatos.Controls.Add(label10);
+            editdatos.Controls.Add(label12);
+            editdatos.Controls.Add(label11);
+            editdatos.Dock = DockStyle.Right;
+            editdatos.Location = new Point(571, 0);
+            editdatos.Name = "editdatos";
+            editdatos.Size = new Size(253, 434);
+            editdatos.TabIndex = 14;
+            editdatos.Visible = false;
             // 
             // txtactualcontra
             // 
@@ -221,7 +179,6 @@
             confirmar.TabIndex = 31;
             confirmar.Text = "Confirmar";
             confirmar.UseVisualStyleBackColor = true;
-            confirmar.Click += confirmar_Click;
             // 
             // cancelar
             // 
@@ -231,7 +188,6 @@
             cancelar.TabIndex = 30;
             cancelar.Text = "Cancelar";
             cancelar.UseVisualStyleBackColor = true;
-            cancelar.Click += cancelar_Click;
             // 
             // label15
             // 
@@ -349,30 +305,38 @@
             label16.TabIndex = 30;
             label16.Text = "My Profile";
             // 
+            // lblcorreo
+            // 
+            lblcorreo.AutoSize = true;
+            lblcorreo.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblcorreo.Location = new Point(181, 191);
+            lblcorreo.Name = "lblcorreo";
+            lblcorreo.Size = new Size(56, 19);
+            lblcorreo.TabIndex = 31;
+            lblcorreo.Text = "Usuario";
+            lblcorreo.Click += label6_Click;
+            // 
             // Perfil
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(498, 433);
+            ClientSize = new Size(824, 434);
+            Controls.Add(lblcorreo);
             Controls.Add(label16);
-            Controls.Add(panel1);
-            Controls.Add(lblemail);
+            Controls.Add(editdatos);
             Controls.Add(lblname);
             Controls.Add(lbllastname);
             Controls.Add(lbluser);
             Controls.Add(linkLabel1);
-            Controls.Add(label4);
-            Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(label1);
             Controls.Add(perfilimage);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Perfil";
             Text = "Perfil";
             Load += Perfil_Load;
             ((System.ComponentModel.ISupportInitialize)perfilimage).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            editdatos.ResumeLayout(false);
+            editdatos.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -389,7 +353,7 @@
         private Label lblname;
         private Label lbllastname;
         private Label lbluser;
-        private Panel panel1;
+        private Panel editdatos;
         private TextBox txtconfirmarcontra;
         private TextBox txtcontra;
         private Label label13;
@@ -408,5 +372,6 @@
         private Button confirmar;
         private TextBox txtactualcontra;
         private Label label5;
+        private Label lblcorreo;
     }
 }

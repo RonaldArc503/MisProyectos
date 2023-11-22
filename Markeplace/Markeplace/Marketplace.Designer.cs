@@ -44,7 +44,7 @@
             pictureBox1 = new PictureBox();
             buscador = new Panel();
             perfilimage = new PictureBox();
-            salirapp = new Label();
+            userdata = new Label();
             panel3 = new Panel();
             panel4 = new Panel();
             panel1.SuspendLayout();
@@ -239,7 +239,7 @@
             perfilimage.BackColor = Color.Transparent;
             perfilimage.BackgroundImageLayout = ImageLayout.None;
             perfilimage.Image = (Image)resources.GetObject("perfilimage.Image");
-            perfilimage.Location = new Point(859, 26);
+            perfilimage.Location = new Point(831, 28);
             perfilimage.Name = "perfilimage";
             perfilimage.Size = new Size(50, 50);
             perfilimage.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -247,20 +247,20 @@
             perfilimage.TabStop = false;
             perfilimage.Click += perfilimage_Click;
             // 
-            // salirapp
+            // userdata
             // 
-            salirapp.AutoSize = true;
-            salirapp.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            salirapp.Location = new Point(929, 41);
-            salirapp.Name = "salirapp";
-            salirapp.Size = new Size(42, 21);
-            salirapp.TabIndex = 6;
-            salirapp.Text = "User";
-            salirapp.Click += salirapp_Click;
+            userdata.AutoSize = true;
+            userdata.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            userdata.Location = new Point(887, 41);
+            userdata.Name = "userdata";
+            userdata.Size = new Size(42, 21);
+            userdata.TabIndex = 6;
+            userdata.Text = "User";
+            userdata.Click += salirapp_Click;
             // 
             // panel3
             // 
-            panel3.Controls.Add(salirapp);
+            panel3.Controls.Add(userdata);
             panel3.Controls.Add(buscador);
             panel3.Controls.Add(perfilimage);
             panel3.Dock = DockStyle.Top;
@@ -278,6 +278,7 @@
             panel4.Name = "panel4";
             panel4.Size = new Size(1024, 528);
             panel4.TabIndex = 8;
+            panel4.Paint += panel4_Paint;
             // 
             // Marketplace
             // 
@@ -317,7 +318,7 @@
         private Button button4;
         private Button button3;
         private PictureBox perfilimage;
-        private Label salirapp;
+        private Label userdata;
         private Button button8;
         private Button button7;
         private Button button6;

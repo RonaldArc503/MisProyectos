@@ -85,8 +85,9 @@ namespace Markeplace
                         }
                     }
 
-
                     string consultaUsuario = "SELECT COUNT(*) FROM Usuarios WHERE Usuario = @Usuario AND Clave = @Contraseña";
+                    string consultaDatosUsuario = "SELECT ID, Nombre, Apellido FROM Usuarios WHERE Usuario = @Usuario AND Clave = @Contraseña";
+
                     using (SqlCommand comando = new SqlCommand(consultaUsuario, conexion))
                     {
                         comando.Parameters.AddWithValue("@Usuario", usuario);
@@ -96,20 +97,39 @@ namespace Markeplace
 
                         if (resultadoUsuario > 0)
                         {
-                            // user normales
+                            using (SqlCommand comandoDatosUsuario = new SqlCommand(consultaDatosUsuario, conexion))
+                            {
+                                comandoDatosUsuario.Parameters.AddWithValue("@Usuario", usuario);
+                                comandoDatosUsuario.Parameters.AddWithValue("@Contraseña", contraseña);
 
+                                using (SqlDataReader lector = comandoDatosUsuario.ExecuteReader())
+                                {
+                                    if (lector.Read())
+                                    {
+                                        int id = (int)lector["ID"];
+                                      //  string id = lector["ID"].ToString();
+                                        string nombre = lector["Nombre"].ToString();
+                                        string apellido = lector["Apellido"].ToString();
 
+                                     
+                                        Marketplace Finicio = new Marketplace();
+                                        Finicio.ID = id;
+                                        Finicio.Usuario = usuario;
+                                        Finicio.Nombre = nombre;
+                                        Finicio.Apellido = apellido; 
 
-                            Marketplace Finicio = new Marketplace();
-                            Hide();
-                            Finicio.ShowDialog();
-                            Close();
-
-
+                                        Hide();
+                                        Finicio.ShowDialog();
+                                        Close();
+                                    }
+                                }
+                            }
                         }
+                    
+
 
                         else
-                        {
+                    {
                             MessageBox.Show("No existe cuenta");
                         }
 

@@ -20,9 +20,61 @@ namespace Markeplace
             InitializeComponent();
         }
 
-        public void MostrarNombreApellido(string nombre, string apellido)
+        private string connectionString = "Server=DESKTOP-LALT64T; database=Markeplace; integrated security=true";
+
+        public int ID { get; set; }
+        public string Usuario { get; set; }
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+
+        private void Perfil_Load(object sender, EventArgs e)
         {
-            //   label1.Text = $"Nombre: {nombre} {apellido}";
+            // lblname.Text = Nombre;
+            //  lbluser.Text = Usuario;
+            //  lbllastname.Text = Apellido;
+
+
+
+            int idUsuario = ID;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT ID, Nombre, Apellido, Usuario, Correo FROM Usuarios WHERE ID = @Id";
+
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Id", idUsuario);
+
+                try
+                {
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        //lblID.Text = $"ID: {reader["ID"]}";
+                        lblname.Text = $"Nombre: {reader["Nombre"]}";
+                        lbllastname.Text = $"Apellido: {reader["Apellido"]}";
+                        lbluser.Text = $"Usuario: {reader["Usuario"]}";
+                        lblcorreo.Text = $"Correo: {reader["Correo"]}";
+                    }
+
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+
+
+
+
+
+
+
+
+
+
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -30,89 +82,17 @@ namespace Markeplace
 
         }
 
-        private void label16_Click(object sender, EventArgs e)
+        private void label6_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void Perfil_Load(object sender, EventArgs e)
-        {
-
-        }
-        private void loadUserData()
-        {
-            try
-            {
-                string connectionString = "Server=DESKTOP-LALT64T; database=Markeplace; integrated security= true ";
-                string usuario = lbluser.Text;
-                string nombre = lblname.Text;
-                string apellido = lbllastname.Text;
-                string correo = lblemail.Text;
-                string user = txtusername.Text;
-                string nome = txtfirstname.Text;
-                string lastname = txtlastname.Text;
-                string email = txtemail.Text;
-
-
-                using (SqlConnection conexion = new SqlConnection(connectionString))
-                {
-                    conexion.Open();
-
-                    string consultaUsuario = "SELECT COUNT(*) FROM Usuarios WHERE Usuario = @Usuario, @Name = @Name, @Lastname = @Lastname, @Correo = @Correo";
-                    using (SqlCommand comando = new SqlCommand(consultaUsuario, conexion))
-                    {
-                        comando.Parameters.AddWithValue("@Usuario", usuario);
-                        comando.Parameters.AddWithValue("@Name", nombre);
-                        comando.Parameters.AddWithValue("@Lastname", apellido);
-                        comando.Parameters.AddWithValue("@Correo", correo);
-
-                        int resultadoUsuario = (int)comando.ExecuteScalar();
-                    }
-
-
-                }
-            }
-            catch (SqlException)
-            {
-                MessageBox.Show("error vuelva a intentar");
-            }
 
 
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            panel1.Visible = true;
-        }
-
-        private void confirmar_Click(object sender, EventArgs e)
-        {
-            //if (txtcontra.Text == txtconfirmarcontra.Text)
-            {
-                //if (txtactualcontra.Text == //contraseña actual segun el sql server//
-                {
-                    //var ((meter aca los mismos valores ingresador de donde se enviara la info desde sql aca))//
-                    //var  result = userModel.editUserProfile();
-                    //MessageBox.Show(result);
-                   // ocupa comando reset para reiniciar todo pero no me detecta ningun comando asi a mi  (reset();)
-                    //Panel1.Visible = False;
-
-                }
-                //else
-                    MessageBox.Show("Contraseña actual incorrecta, por favor vuelve a intentar");
-            }
-           // else
-                MessageBox.Show("Las contraseñas no coinciden, reviselo y vuela a intentarlo");
-        }
-
-        private void cancelar_Click(object sender, EventArgs e)
-        {
-            panel1.Visible=false;
-          // aca tambien ocupa el reset
+            editdatos.Visible = true;
         }
     }
+
+
 }
-
-
-
-
