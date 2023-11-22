@@ -201,6 +201,7 @@
             Controls.Add(label2);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Perfil";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Perfil";
             Load += Perfil_Load;
             ((System.ComponentModel.ISupportInitialize)perfiliconimg).EndInit();

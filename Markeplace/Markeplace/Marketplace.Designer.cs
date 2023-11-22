@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Marketplace));
             panel1 = new Panel();
+            button9 = new Button();
             button8 = new Button();
             button7 = new Button();
             button6 = new Button();
@@ -47,7 +48,6 @@
             userdata = new Label();
             panel3 = new Panel();
             panel4 = new Panel();
-            button9 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -72,6 +72,19 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(255, 431);
             panel1.TabIndex = 0;
+            // 
+            // button9
+            // 
+            button9.BackColor = Color.FromArgb(32, 238, 173);
+            button9.Dock = DockStyle.Bottom;
+            button9.FlatStyle = FlatStyle.Popup;
+            button9.Font = new Font("Microsoft YaHei UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            button9.Location = new Point(0, 287);
+            button9.Name = "button9";
+            button9.Size = new Size(255, 48);
+            button9.TabIndex = 8;
+            button9.Text = "Ayuda";
+            button9.UseVisualStyleBackColor = false;
             // 
             // button8
             // 
@@ -263,6 +276,7 @@
             // 
             // panel3
             // 
+            panel3.BackColor = Color.FromArgb(250, 255, 253);
             panel3.Controls.Add(userdata);
             panel3.Controls.Add(buscador);
             panel3.Controls.Add(perfilimage);
@@ -281,19 +295,6 @@
             panel4.Size = new Size(847, 430);
             panel4.TabIndex = 8;
             panel4.Paint += panel4_Paint;
-            // 
-            // button9
-            // 
-            button9.BackColor = Color.FromArgb(32, 238, 173);
-            button9.Dock = DockStyle.Bottom;
-            button9.FlatStyle = FlatStyle.Popup;
-            button9.Font = new Font("Microsoft YaHei UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            button9.Location = new Point(0, 287);
-            button9.Name = "button9";
-            button9.Size = new Size(255, 48);
-            button9.TabIndex = 8;
-            button9.Text = "Ayuda";
-            button9.UseVisualStyleBackColor = false;
             // 
             // Marketplace
             // 
