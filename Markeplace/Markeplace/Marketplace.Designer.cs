@@ -48,6 +48,15 @@
             userdata = new Label();
             panel3 = new Panel();
             panel4 = new Panel();
+            itemshop28 = new itemshop();
+            itemshop29 = new itemshop();
+            itemshop30 = new itemshop();
+            itemshop31 = new itemshop();
+            itemshop32 = new itemshop();
+            itemshop33 = new itemshop();
+            itemshop34 = new itemshop();
+            itemshop35 = new itemshop();
+            itemshop36 = new itemshop();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -55,6 +64,7 @@
             buscador.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)perfilimage).BeginInit();
             panel3.SuspendLayout();
+            panel4.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -302,11 +312,92 @@
             // 
             panel4.AutoScroll = true;
             panel4.BackColor = Color.FromArgb(0, 99, 136);
+            panel4.Controls.Add(itemshop34);
+            panel4.Controls.Add(itemshop35);
+            panel4.Controls.Add(itemshop36);
+            panel4.Controls.Add(itemshop31);
+            panel4.Controls.Add(itemshop32);
+            panel4.Controls.Add(itemshop33);
+            panel4.Controls.Add(itemshop30);
+            panel4.Controls.Add(itemshop29);
+            panel4.Controls.Add(itemshop28);
             panel4.Location = new Point(309, 140);
             panel4.Name = "panel4";
-            panel4.Size = new Size(909, 430);
+            panel4.Size = new Size(930, 488);
             panel4.TabIndex = 8;
             panel4.Paint += panel4_Paint;
+            // 
+            // itemshop28
+            // 
+            itemshop28.BackColor = Color.White;
+            itemshop28.Location = new Point(25, 24);
+            itemshop28.Name = "itemshop28";
+            itemshop28.Size = new Size(263, 253);
+            itemshop28.TabIndex = 0;
+            // 
+            // itemshop29
+            // 
+            itemshop29.BackColor = Color.White;
+            itemshop29.Location = new Point(333, 24);
+            itemshop29.Name = "itemshop29";
+            itemshop29.Size = new Size(263, 253);
+            itemshop29.TabIndex = 1;
+            // 
+            // itemshop30
+            // 
+            itemshop30.BackColor = Color.White;
+            itemshop30.Location = new Point(636, 24);
+            itemshop30.Name = "itemshop30";
+            itemshop30.Size = new Size(263, 253);
+            itemshop30.TabIndex = 2;
+            // 
+            // itemshop31
+            // 
+            itemshop31.BackColor = Color.White;
+            itemshop31.Location = new Point(636, 297);
+            itemshop31.Name = "itemshop31";
+            itemshop31.Size = new Size(263, 253);
+            itemshop31.TabIndex = 5;
+            // 
+            // itemshop32
+            // 
+            itemshop32.BackColor = Color.White;
+            itemshop32.Location = new Point(333, 297);
+            itemshop32.Name = "itemshop32";
+            itemshop32.Size = new Size(263, 253);
+            itemshop32.TabIndex = 4;
+            // 
+            // itemshop33
+            // 
+            itemshop33.BackColor = Color.White;
+            itemshop33.Location = new Point(25, 297);
+            itemshop33.Name = "itemshop33";
+            itemshop33.Size = new Size(263, 253);
+            itemshop33.TabIndex = 3;
+            // 
+            // itemshop34
+            // 
+            itemshop34.BackColor = Color.White;
+            itemshop34.Location = new Point(636, 577);
+            itemshop34.Name = "itemshop34";
+            itemshop34.Size = new Size(263, 253);
+            itemshop34.TabIndex = 8;
+            // 
+            // itemshop35
+            // 
+            itemshop35.BackColor = Color.White;
+            itemshop35.Location = new Point(333, 577);
+            itemshop35.Name = "itemshop35";
+            itemshop35.Size = new Size(263, 253);
+            itemshop35.TabIndex = 7;
+            // 
+            // itemshop36
+            // 
+            itemshop36.BackColor = Color.White;
+            itemshop36.Location = new Point(25, 577);
+            itemshop36.Name = "itemshop36";
+            itemshop36.Size = new Size(263, 253);
+            itemshop36.TabIndex = 6;
             // 
             // Marketplace
             // 
@@ -330,6 +421,7 @@
             ((System.ComponentModel.ISupportInitialize)perfilimage).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
+            panel4.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -382,5 +474,14 @@
         private itemshop itemshop12;
         private Button btnayuda;
         private Panel pnlayuda;
+        private itemshop itemshop34;
+        private itemshop itemshop35;
+        private itemshop itemshop36;
+        private itemshop itemshop31;
+        private itemshop itemshop32;
+        private itemshop itemshop33;
+        private itemshop itemshop30;
+        private itemshop itemshop29;
+        private itemshop itemshop28;
     }
 }
