@@ -74,10 +74,41 @@ namespace Markeplace
             }
             catch (SqlException)
             {
-              MessageBox.Show("error vuelva a intentar");
+                MessageBox.Show("error vuelva a intentar");
             }
 
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            panel1.Visible = true;
+        }
+
+        private void confirmar_Click(object sender, EventArgs e)
+        {
+            //if (txtcontra.Text == txtconfirmarcontra.Text)
+            {
+                //if (txtactualcontra.Text == //contraseña actual segun el sql server//
+                {
+                    //var ((meter aca los mismos valores ingresador de donde se enviara la info desde sql aca))//
+                    //var  result = userModel.editUserProfile();
+                    //MessageBox.Show(result);
+                   // ocupa comando reset para reiniciar todo pero no me detecta ningun comando asi a mi  (reset();)
+                    //Panel1.Visible = False;
+
+                }
+                //else
+                    MessageBox.Show("Contraseña actual incorrecta, por favor vuelve a intentar");
+            }
+           // else
+                MessageBox.Show("Las contraseñas no coinciden, reviselo y vuela a intentarlo");
+        }
+
+        private void cancelar_Click(object sender, EventArgs e)
+        {
+            panel1.Visible=false;
+          // aca tambien ocupa el reset
         }
     }
 }

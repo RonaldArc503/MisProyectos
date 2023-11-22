@@ -80,6 +80,13 @@ namespace Markeplace
 
         }
 
+        private void perfilimage_Click(object sender, EventArgs e)
+        {
+            Perfil pf = new Perfil();
+            Hide();
+            pf.ShowDialog();
+            Close();
+        }
     }
 }
 
